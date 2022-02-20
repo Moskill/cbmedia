@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Header from './components/header/Header';
+import TopContainer from './components/body/topContainer/TopContainer';
 
 export default function Home() {
   return (
@@ -31,15 +32,14 @@ export default function Home() {
 
       <main>
         <Header />
+        <TopContainer />
       </main>
 
       <footer className={styles.footer}>
-      
-          <span className={styles.logo}>
-            <h3>HIER IST DER FOOTER</h3>
-            {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
-          </span>
-    
+        <span className={styles.logo}>
+          <h3>HIER IST DER FOOTER</h3>
+          {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
+        </span>
       </footer>
     </div>
   )
