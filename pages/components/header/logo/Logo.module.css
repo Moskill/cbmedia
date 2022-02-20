@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Orbitron&family=Poppins:wght@300&family=Roboto:wght@100&family=Ubuntu:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Open+Sans+Condensed:wght@700&family=Orbitron&family=Poppins:wght@300&family=Roboto:wght@100&family=Ubuntu:wght@500&display=swap');
+
+
+.bigText1, .bigText2 {
+  letter-spacing: 6px;
+}
+
+.bigText1 {
+  font-family: 'Arial';  
+  font-size: 36px;
+  color: #b30303;
+  font-weight: 700;
+}
+
+.bigFont {
+  margin-bottom: -30px;
+}
+
+.smallFont {
+  margin-bottom: 10px;
+}
+
+.bigText2 {
+  font-family: 'Ubuntu';
+  font-size: 36px;
+  color: #353535;
+  font-weight: 300;
+}
+
+.smallText1, .smallText2 {
+  font-size: 16px;
+  letter-spacing: 2.5px;
+}
+
+.smallText1 {
+  color: #353535;
+}
+
+.smallText2 {
+  color: #b30303;
+}
+
+.container {
+  position: relative;
+  left: 10%;
+  top: 15%;
+}
