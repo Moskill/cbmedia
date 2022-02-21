@@ -1,16 +1,40 @@
 .container {
   width: 100%;
   height: calc(100vh - 5rem);
-  background-image: url('../../../assets/development-1920.jpg');
-  /* background-size: 100%; */
   background-repeat: no-repeat;
   background-position: 50% 90%;
 }
 
+.development {
+  background-image: url('../../../assets/development.jpg');
+}
 .container::before {
   content: '';
-  background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(0,212,255,0) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(0,212,255,0) 80%);
   width: 100%; 
   height: calc(100vh - 5rem);
   position: absolute;
+}
+
+.containerTitle {
+  font-family: 'Ubuntu';
+  font-size: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  top: 10%;
+  margin-left: 10%;
+  width: 25rem;
+  height: auto;
+  padding: 2rem;
+  border-radius: 0.5rem;;
+}
+
+.someDiv {
+  font-size: 30px;
+  position: absolute;
+  color: #353535;
+  font-weight: 700;
 }
