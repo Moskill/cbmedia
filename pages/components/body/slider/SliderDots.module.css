@@ -1,0 +1,24 @@
+
+.slider-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #b30303;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+  margin: 0px 8px;
+}
+
+.slider-dot-active {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #b30303;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+  margin: 0px 8px;
+  background-color: #b30303;
+}

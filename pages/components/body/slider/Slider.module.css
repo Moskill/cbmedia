@@ -12,8 +12,6 @@
   background-position: 50% 90%;
 }
 
-
-
 .right-arrow {
   position: absolute;
   top: 50%;
@@ -39,7 +37,7 @@
 .slide {
   opacity: 0;
   transition-duration: 1s;
-  transform: scale(0.15);
+  transform: scale(0.75);
   /* transform: rotate(180deg); */
   transition: 200ms ease-in-out;
 }
@@ -50,6 +48,7 @@
   width: 100%; 
   height: calc(100vh - 5rem);
   position: absolute;
+  transition: all ease-in;
 }
 
 .slide-active {
@@ -59,13 +58,67 @@
 }
 
 .slider-infobox {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.2);
+  max-width: 40%;
   position: absolute;
+  left: 10%;
+  top: 5rem;
   padding: 2rem;
   z-index: 20;
+  box-shadow: 7px 7px 15px rgba(0,0,0,0.5);
+  border-radius: 10px;
 }
 
 .slider-infobox h1 {
   font-size: 36px;
-  font-color: #353535;
+  color: #353535;
+  margin-bottom: 0px;
+  margin-top: 0rem;
 }
+
+.slider-subtitle {
+  font-family: 'Ubuntu';
+  color: #b30303;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.slider-infobox p {
+  font-size: 16px;
+}
+
+.slider-infobox button {
+  border-radius: 2px;
+  background: #b30303;
+  color: white;
+  font-size: 20px;
+  padding: 15px 35px;
+  border: none;
+  margin-top: 2rem;
+}
+
+.slider-btn-box {
+  display: flex;
+  justify-content: space-between;
+  max-width: 45%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  color: black;
+  z-index: 24;
+  bottom: 15%;
+  left: 40%;
+  width: 20%;
+}
+
+.page-dot-active {
+  position: relative;
+  width: 20px;
+  height: 20px; 
+  border-radius: 50%;
+  background-color: #b30303;
+}
+
