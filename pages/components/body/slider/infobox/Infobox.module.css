@@ -1,0 +1,66 @@
+/* .slider-infobox::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  z-index: 1;
+  left: 0%;
+  top: 0rem;
+} */
+
+.slider-infobox {
+  /* background-color: rgba(0,0,0,0.2); */
+  background-image: url('../../../../assets/bg8.png');
+  max-width: 40%;
+  position: absolute;
+  left: 10%;
+  top: 5rem;
+  padding: 2rem;
+  z-index: 20;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+}
+
+.slider-infobox h1 {
+  font-size: 36px;
+  color: #353535;
+  margin-bottom: 0px;
+  margin-top: 0rem;
+}
+
+.slider-subtitle {
+  font-family: 'Ubuntu';
+  color: #b30303;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.slider-infobox p {
+  font-size: 16px;
+}
+
+.slider-infobox button {
+  border-radius: 1px;
+  background: #b30303;
+  border: 1px solid #9b0000;
+  color: white;
+  font-size: 20px;
+  padding: 15px 35px;
+  /* border: none; */
+  margin-top: 2rem;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.slider-infobox button:hover {
+  box-shadow: none;
+  background: #9b0000;
+}
+
+.slider-btn-box {
+  display: flex;
+  justify-content: space-between;
+  max-width: 45%;
+}
