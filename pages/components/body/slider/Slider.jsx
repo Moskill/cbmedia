@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './Slider.module.css';
 import design from '../../../assets/design.jpg';
 import development from '../../../assets/development.jpg';
@@ -31,6 +31,13 @@ const Slider = (props) => {
   const prevSlide = () => {
     setCurrent(current === 0 ? length -1 : current - 1)
   }
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide();
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, [current]);
 
 
   return (
