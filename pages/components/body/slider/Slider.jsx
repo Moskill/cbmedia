@@ -25,11 +25,16 @@ const Slider = (props) => {
   }
 
   const nextSlide = () => {
+
     setCurrent(current === length - 1 ? 0 : current + 1)
   }
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length -1 : current - 1)
+  }
+
+  const selectSlidePerDot = (index) => {
+    setCurrent(index);
   }
 
   // useEffect(() => {
@@ -46,7 +51,7 @@ const Slider = (props) => {
         <Infobox data={SliderData[current]} />
         <div className={classes.pagination}>
           {SliderData.map((item, index) => {
-            return <SliderDots index={index} active={current} />
+            return <SliderDots key={index} index={index} active={current} onClick={selectSlidePerDot} />
           })}
 
         </div>
@@ -57,7 +62,7 @@ const Slider = (props) => {
           return (
             <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
               {index === current && (
-                <img src={getImage(item.image)} alt={item.subtitle} className={classes.image}/> 
+                <img src={getImage(item.image)} alt={item.subtitle} className={classes.image} key={index}/> 
               )}
             </div>
           )
