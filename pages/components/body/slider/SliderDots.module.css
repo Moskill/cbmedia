@@ -22,3 +22,78 @@
   margin: 0px 8px;
   background-color: #b30303;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .slider-dot {
+    width: 14px;
+    height: 14px;
+    margin: 0px 8px;
+  }
+  
+  .slider-dot-active {
+    width: 14px;
+    height: 14px;
+    margin: 0px 8px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .slider-dot {
+    width: 16px;
+    height: 16px;
+    margin: 0px 8px;
+  }
+  
+  .slider-dot-active {
+    width: 16px;
+    height: 16px;
+    margin: 0px 8px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .slider-dot {
+    width: 18px;
+    height: 18px;
+    margin: 0px 8px;
+  }
+  
+  .slider-dot-active {
+    width: 18px;
+    height: 18px;
+    margin: 0px 8px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .slider-dot {
+    width: 20px;
+    height: 20px;
+    margin: 0px 8px;
+  }
+  
+  .slider-dot-active {
+    width: 20px;
+    height: 20px;
+    margin: 0px 8px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .slider-dot {
+    width: 30px;
+    height: 30px;
+    margin: 0px 8px;
+  }
+  
+  .slider-dot-active {
+    width: 30px;
+    height: 30px;
+    margin: 0px 8px;
+  }
+}

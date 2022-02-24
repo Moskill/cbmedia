@@ -69,26 +69,31 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .slider-infobox {
-    max-width: 70%;
+    max-width: 80%;
+    left: 10%;
+    top: 1rem;
+    padding: 10px;
   }
 
   .slider-infobox p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .slider-infobox h1 {
-    font-size: 20px;
+    font-size: 18px;
     color: #353535;
     margin-bottom: 0px;
     margin-top: 0rem;
   }
   .slider-subtitle {
-    font-size: 14px;
+    font-size: 12px;
+    margin: 0px;
   }
       
   .slider-infobox button {
     font-size: 12px;
     padding: 8px 24px;
+    margin: 0rem 0.5rem;
   }
 
   .slider-btn-box {
@@ -100,6 +105,9 @@
 @media only screen and (min-width: 600px) {
   .slider-infobox {
     max-width: 70%;
+    left: 15%;
+    top: 1rem;
+    padding: 10px;
   }
 
   .slider-infobox p {
@@ -130,6 +138,8 @@
 @media only screen and (min-width: 768px) {
   .slider-infobox {
     max-width: 70%;
+    padding: 1rem;
+    margin: 2rem 0rem;
   }
 
   .slider-infobox p {
