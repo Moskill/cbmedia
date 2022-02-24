@@ -49,8 +49,7 @@
   color: white;
   font-size: 20px;
   padding: 15px 35px;
-  /* border: none; */
-  margin-top: 2rem;
+  margin: 1rem 0.5rem;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
@@ -61,6 +60,156 @@
 
 .slider-btn-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-arround;
   max-width: 45%;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .slider-infobox {
+    max-width: 70%;
+  }
+
+  .slider-infobox p {
+    font-size: 12px;
+  }
+
+  .slider-infobox h1 {
+    font-size: 20px;
+    color: #353535;
+    margin-bottom: 0px;
+    margin-top: 0rem;
+  }
+  .slider-subtitle {
+    font-size: 14px;
+  }
+      
+  .slider-infobox button {
+    font-size: 12px;
+    padding: 8px 24px;
+  }
+
+  .slider-btn-box {
+    max-width: 30%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .slider-infobox {
+    max-width: 70%;
+  }
+
+  .slider-infobox p {
+    font-size: 14px;
+  }
+
+  .slider-infobox h1 {
+    font-size: 24px;
+    color: #353535;
+    margin-bottom: 0px;
+    margin-top: 0rem;
+  }
+  .slider-subtitle {
+    font-size: 14px;
+  }
+    
+  .slider-infobox button {
+    font-size: 14px;
+    padding: 8px 24px;
+  }
+
+  .slider-btn-box {
+    max-width: 40%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .slider-infobox {
+    max-width: 70%;
+  }
+
+  .slider-infobox p {
+    font-size: 16px;
+  }
+
+  .slider-infobox h1 {
+    font-size: 24px;
+    color: #353535;
+    margin-bottom: 0px;
+    margin-top: 0rem;
+  }
+
+  .slider-subtitle {
+    font-size: 16px;
+  }
+
+  .slider-infobox button {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+
+  .slider-btn-box {
+    max-width: 40%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .slider-infobox {
+    max-width: 60%;
+  }
+
+  .slider-infobox p {
+    font-size: 18px;
+  }
+
+  .slider-infobox h1 {
+    font-size: 28px;
+    color: #353535;
+    margin-bottom: 0px;
+    margin-top: 0rem;
+  }
+
+  .slider-subtitle {
+    font-size: 18px;
+  }
+
+  .slider-infobox button {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+
+  .slider-btn-box {
+    max-width: 40%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .slider-infobox {
+    max-width: 50%;
+  }
+
+  .slider-infobox p {
+    font-size: 20px;
+  }
+
+  .slider-infobox h1 {
+    font-size: 34px;
+    color: #353535;
+    margin-bottom: 0px;
+    margin-top: 0rem;
+  }
+  .slider-infobox button {
+    font-size: 22px;
+    padding: 15px 35px;
+  }
+
+  .slider-btn-box {
+    max-width: 40%;
+  }
 }

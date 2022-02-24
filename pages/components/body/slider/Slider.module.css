@@ -6,10 +6,13 @@
 }
 
 .image {
-  width: 100%;
-  height: calc(100vh - 5rem);
+  height: auto;
   background-repeat: no-repeat;
-  background-position: 50% 90%;
+  background-position: 66% 90%;
+  overflow: hidden;
+  margin: auto;
+  width: 100%;
+  max-height: calc(100vh - 5rem);
 }
 
 .right-arrow {

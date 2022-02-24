@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import classes from '../styles/Home.module.css';
 import Header from './components/header/Header';
 import TopContainer from './components/body/topContainer/TopContainer';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={classes.container}>
       <Head>
-        <title>BoMedia - Dein Partner für Design und Entwicklung</title>
+        <title>CBMedia - Dein Partner für Design und Entwicklung</title>
         <meta name="description" content="BoMedia - Dein Partner für Design und Entwicklung" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/>
@@ -30,13 +30,13 @@ export default function Home() {
         <meta name="theme-color" content="#ffffff"/>
       </Head>
 
-      <main>
+      <main className={classes.main}>
         <Header />
         <TopContainer />
       </main>
 
-      <footer className={styles.footer}>
-        <span className={styles.logo}>
+      <footer className={classes.footer}>
+        <span className={classes.logo}>
           <h3>HIER IST DER FOOTER</h3>
           {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
         </span>
