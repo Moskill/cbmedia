@@ -5,9 +5,6 @@
   background-position: 50% 90%;
 }
 
-.development {
-  background-image: url('../../../assets/development.jpg');
-}
 .container::before {
   content: '';
   background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(0,212,255,0) 80%);
@@ -30,11 +27,4 @@
   height: auto;
   padding: 2rem;
   border-radius: 0.5rem;;
-}
-
-.someDiv {
-  font-size: 30px;
-  position: absolute;
-  color: #353535;
-  font-weight: 700;
 }
