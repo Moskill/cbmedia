@@ -10,7 +10,7 @@ const CallInfo = () => {
   return (
     <>
       {!callinfoIsActive && <div className={classes['wrapper-inactive']} onClick={() => setCallinfoIsActive(true)}>
-          <div className={classes['callinfo-inactive']}><GiRotaryPhone style={{fontSize: '34px'}}/></div>
+          <div className={classes['callinfo-inactive']}><GiRotaryPhone /></div>
         </div>}
 
       {callinfoIsActive && <div className={classes['wrapper']} onClick={() => setCallinfoIsActive(false)}>

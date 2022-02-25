@@ -1,16 +1,18 @@
 import React from 'react';
+import RespNav from '../respNav/RespNav';
 import classes from './Navbar.module.css';
 
 const Navbar = () => {
   return (
     <>
-      <div className={classes.container}>
-        <div className={classes.navElement}>Home</div>
-        <div className={classes.navElement}>Über Uns</div>
-        <div className={classes.navElement}>Dienste</div>
-        <div className={classes.navElement}>Referenzen</div>
-        <div className={classes.navElement}>Kontakt</div>
-      </div>
+      <ul className={classes.container}>
+        <li className={classes.navElement}>Home</li>
+        <li className={classes.navElement}>Über Uns</li>
+        <li className={classes.navElement}>Dienste</li>
+        <li className={classes.navElement}>Referenzen</li>
+        <li className={classes.navElement}>Kontakt</li>
+      </ul>
+      <RespNav />
     </>
   )
 }
