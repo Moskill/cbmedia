@@ -3,6 +3,7 @@ import Image from 'next/image';
 import classes from '../styles/Home.module.css';
 import Header from './components/header/Header';
 import TopContainer from './components/body/topContainer/TopContainer';
+import RespNav from './components/header/respNav/RespNav';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       </Head>
 
       <main className={classes.main}>
+        <RespNav />
         <Header />
         <TopContainer />
       </main>

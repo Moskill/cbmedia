@@ -4,11 +4,12 @@ import { FaRegWindowClose } from 'react-icons/fa';
 
 const RespNavOverlay = (props) => {
 
-  console.log(props)
   return (
     <>
-      <FaRegWindowClose onClick={() => props.setRespOverlayOpen(false)}/>
-      <div className={classes['container']}>RespNavOverlay</div>
+      <div className={classes['icon-container']} onClick={props.onOverlayOpen}>
+        <FaRegWindowClose onClick={props.onOverlayOpen}/>
+      </div>
+      <div className={classes['container']}></div>
     </>
   )
 }
