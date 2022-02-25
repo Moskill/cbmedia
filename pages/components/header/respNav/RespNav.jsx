@@ -8,17 +8,18 @@ import RespNavOverlay from './RespNavOverlay';
 const RespNav = () => {
 
   const [respOverlayOpen, setRespOverlayOpen] = useState(false);
+  const [showBurgerIcon, setShowBurgerIcon] = useState(true);
 
-  // const openOverlayHandler = () => {
-  //   RespNavOverlay === true ? setRespOverlayOpen(false) : setRespOverlayOpen(true);
-  //   console.log(respOverlayOpen, 'onClick')
-  // }
-  console.log(setRespOverlayOpen)
+  const openOverlayHandler = () => {
+    respOverlayOpen === false ? setRespOverlayOpen(true) : setRespOverlayOpen(false);
+    showBurgerIcon === true ? setShowBurgerIcon(false) : setShowBurgerIcon(true);
+    console.log(showBurgerIcon)
+  }
 
   return (
     <>
-      {respOverlayOpen && <RespNavOverlay setRespOverlayOpen={setRespOverlayOpen} />}
-      <GiHamburgerMenu className={classes['burger-icon']} onClick={() => setRespOverlayOpen(true)}/>
+      {!showBurgerIcon && <RespNavOverlay onOverlayOpen={openOverlayHandler} />}
+      {showBurgerIcon && <GiHamburgerMenu className={classes['burger-icon']} onClick={() => openOverlayHandler()}/>} 
     </>
   )
 }

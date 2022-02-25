@@ -12,7 +12,6 @@ const Navbar = () => {
         <li className={classes.navElement}>Referenzen</li>
         <li className={classes.navElement}>Kontakt</li>
       </ul>
-      <RespNav />
     </>
   )
 }
