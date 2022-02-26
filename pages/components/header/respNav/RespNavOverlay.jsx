@@ -19,12 +19,27 @@ const RespNavOverlay = (props) => {
           </li>
           <li>
             <Link href="/about">
-              <a className={classes['router-link']}>About Us</a>
+              <a className={classes['router-link']}>Über uns</a>
             </Link>
           </li>
           <li>
-            <Link href="/blog/hello-world">
-              <a className={classes['router-link']}>Blog Post</a>
+            <Link href="/Referenzen">
+              <a className={classes['router-link']}>Referenzen</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/Services">
+              <a className={classes['router-link']}>Services</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/Kontakt">
+              <a className={classes['router-link']}>Kontakt</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/impressum">
+              <a className={classes['router-link']}>Impressum</a>
             </Link>
           </li>
         </ul>
