@@ -37,12 +37,12 @@ const Slider = (props) => {
     setCurrent(index);
   }
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     nextSlide();
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, [current]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [current]);
 
 
   return (
