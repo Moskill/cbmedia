@@ -6,6 +6,13 @@
   height: 100vh;
   background-color: rgba(0,0,0, 0.9);
   z-index: 25;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container ul {
+  list-style-type: none;
 }
 
 .icon-container {
@@ -27,6 +34,6 @@
 
 .router-link {
   color: white;
-  font-size: 24px;
+  font-size: 44px;
   cursor: pointer;
 }
