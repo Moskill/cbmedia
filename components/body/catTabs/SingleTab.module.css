@@ -1,0 +1,35 @@
+.container {
+  background-color: #b30303;
+  width: 33%;
+  height: calc(100vh/2 - 3rem);
+  border: 1px solid black;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .container {
+    height: calc(110vh/4 - 3rem);
+  }
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .pagination {
+    z-index: 24;
+    bottom: 5%;
+    left: 40%;
+    width: 20%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}

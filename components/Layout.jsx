@@ -5,6 +5,7 @@ import TopContainer from '../components/body/topContainer/TopContainer';
 import RespNav from '../components/header/respNav/RespNav';
 import HTMLHead from '../components/HTMLHead';
 import Webdesign from './body/services/webdesign/Webdesign';
+import TabContainer from './body/catTabs/TabContainer';
 
 const Layout = ({children}) => {
   return (
@@ -14,7 +15,8 @@ const Layout = ({children}) => {
         <RespNav />
         <Header />
         <TopContainer />
-        <Webdesign />
+        <TabContainer />
+
       </main>
       <footer className={classes.footer}>
         <span className={classes.logo}>

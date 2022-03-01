@@ -8,19 +8,7 @@ import HTMLHead from '../components/HTMLHead';
 export default function Home() {
   return (
     <div className={classes.container}>
-      <HTMLHead />
-
-      <main className={classes.main}>
-        <RespNav />
-        <Header />
-        <TopContainer />
-      </main>
-
-      <footer className={classes.footer}>
-        <span className={classes.logo}>
-          <h3>HIER IST DER FOOTER</h3>
-        </span>
-      </footer>
+      
     </div>
   )
 }

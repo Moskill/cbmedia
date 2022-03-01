@@ -11,7 +11,7 @@
 } */
 
 .slider-infobox {
-  /* background-color: rgba(0,0,0,0.2); */
+  background-color: rgba(255,255,255,0.7);
   background-image: url('../../../../assets/bg8.png');
   max-width: 40%;
   position: absolute;
