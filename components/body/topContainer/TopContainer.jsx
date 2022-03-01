@@ -6,7 +6,7 @@ import CallInfo from './CallInfo';
 
 
 const TopContainer = () => {
-  // console.log(SliderData.length)
+
 
   const [containerContent, setContainerContent] = useState('slider');
   return (
