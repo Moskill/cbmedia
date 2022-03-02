@@ -3,6 +3,8 @@
   width: 33%;
   height: calc(100vh/2 - 3rem);
   border: 1px solid black;
+  max-height: 25rem;
+  margin: 1rem 0rem;
 }
 
 
@@ -10,6 +12,7 @@
 @media only screen and (max-width: 600px) {
   .container {
     height: calc(110vh/4 - 3rem);
+    width: 30%;
   }
   
 }
