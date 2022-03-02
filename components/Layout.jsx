@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../styles/Home.module.css';
+import classes from '../styles/Home.module.scss';
 import Header from '../components/header/Header';
 import TopContainer from '../components/body/topContainer/TopContainer';
 import RespNav from '../components/header/respNav/RespNav';
@@ -8,15 +8,22 @@ import Webdesign from './body/services/webdesign/Webdesign';
 import TabContainer from './body/catTabs/TabContainer';
 
 const Layout = ({children}) => {
+
+  const scrollFunc = (e) => {
+    console.log(e);
+  }
   return (
-    <div className={classes.container}>
+    <div className={classes.container} onScroll={scrollFunc}>
       <HTMLHead />
       <main className={classes.main}>
-        <RespNav />
-        <Header />
-        <TopContainer />
-        <TabContainer />
-
+        <section>
+          <RespNav />
+          <Header />
+          <TopContainer />
+        </section>
+        <section>
+          <TabContainer />
+        </section>
       </main>
       <footer className={classes.footer}>
         <span className={classes.logo}>

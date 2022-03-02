@@ -7,7 +7,7 @@ import HTMLHead from '../components/HTMLHead';
 
 export default function Home() {
   return (
-    <div className={classes.container}>
+    <div className='LECKOMIO'>
       
     </div>
   )
