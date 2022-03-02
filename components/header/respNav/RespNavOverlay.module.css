@@ -22,14 +22,15 @@
   top: -1.5%;
   right: 0%;
   font-size: 30px;
-  color: #fff;
-  z-index: 26;
+  color: black;
+  z-index: 30;
 }
 
 .close-icon {
   position:absolute;
-  color: white;
+  color: black;
   font-size: 30px;
+  z-index: 31;
 }
 
 .router-link {
