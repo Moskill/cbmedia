@@ -10,7 +10,7 @@ console.log(TabData)
       <div className={classes.container}>
         {TabData && TabData.map((item, index) => {
           {console.log(item.title)}
-          return <SingleTab key={index} image={item.image} title={item.title} subtile={item.subtitle} link={item.link} text={item.text} />
+          return <SingleTab key={index} image={item.image} title={item.title} subtile={item.subtitle} link={item.link} text={item.text} imgUrl={`../../../assets/xs/${item.image}.jpg`} />
         })}
       </div>
     </>

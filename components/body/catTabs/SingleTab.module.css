@@ -7,22 +7,21 @@
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
+
+}
+
+.overlay-img {
+  opacity: 0.6;
+  width: 100%;
+}
+
+.overlay-img:hover { 
+  opacity: 0.0;
+  transition: opacity ease-in-out 300ms;
 }
 
 .tab-icon {
   font-size: 4rem;
-}
-
-.tab-body::before {
-  content: '';
-  background-image: url('../../../assets/xs/webdesign.jpg');
-  opacity: 0.5;
-  /* z-index: 99; */
-  width: 625px;
-  height: 400px;
-  position: absolute;
-  margin: -2rem;
-  padding: 0rem;
 }
 
 .tab-body {
@@ -41,23 +40,9 @@
 }
 
 
-.tab-body::after {
-  content: '';
-  background-color: rgba(179,3,3,0.8);
-  width: 625px;
-  height: 400px;
-  z-index: 99;
-  position: absolute;
 
-  margin: -2rem;
-  padding: 0rem;
-}
-
-.tab-body:hover:after {
-  background-color: rgba(179,3,3,0);
-  transition: background-color ease-in-out 300ms;
-}
-.tab-body:hover:before {
+.container:hover {
+  opacity: 1;
   background-image: none;
   transition: background-image ease-in-out 300ms;
 }
@@ -72,6 +57,11 @@
   margin-top: 0.2rem;
   color: #353535;
   margin-bottom: -1rem;
+}
+
+.tab-text {
+  font-size: 16px;
+  margin-top: -2rem;
 }
 
 
@@ -102,4 +92,26 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 10240px) {
+  .overlay-img {
+    opacity: 0.6;
+    width: 100%;
+    height: 110%;
+  }
+  .tab-text {
+    font-size: 12px;
+  }
+
+  .text-box {
+    width: 90%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .tab-text {
+    font-size: 16px;
+  }
 }
