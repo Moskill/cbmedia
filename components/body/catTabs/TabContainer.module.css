@@ -41,5 +41,6 @@
   .container {
     height: calc(100vh/2 - 3rem);
     margin-top: 4rem;
+    padding-top: 2rem;
   }
 }
