@@ -1,19 +1,45 @@
 export const webentwicklung = [
   {  
-    develop1: '1',
-    develop2: '2',
-    develop3: '3', 
-    develop4: '4',
-    develop5: '5'
+    title: 'Webdev Nr. 1',
+    image: 'bildname1',
+  },
+  {  
+    title: 'Webdev Nr. 2',
+    image: 'bildname2',
+  },
+  {  
+    title: 'Webdev Nr. 3',
+    image: 'bildname3',
+  },
+  {  
+    title: 'Webdev Nr. 4',
+    image: 'bildname4',
+  },
+  {  
+    title: 'Webdev Nr. 5',
+    image: 'bildname5',
   }
 ];
 
 export const webdesign = [
   {  
-    design1: '1',
-    design2: '2',
-    design3: '3', 
-    design4: '4',
-    design5: '5'
+    title: 'Webdesign Nr. 1',
+    image: 'bildname1',
+  },
+  {  
+    title: 'Webdesign Nr. 2',
+    image: 'bildname2',
+  },
+  {  
+    title: 'Webdesign Nr. 3',
+    image: 'bildname3',
+  },
+  {  
+    title: 'Webdesign Nr. 4',
+    image: 'bildname4',
+  },
+  {  
+    title: 'Webdesign Nr. 5',
+    image: 'bildname5',
   }
 ]

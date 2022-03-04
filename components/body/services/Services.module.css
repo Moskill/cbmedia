@@ -1,5 +1,58 @@
 .container {
   position: relative;
-  width: 20rem;
-  height: 20rem;
+  height: calc(50vh - 2rem);
+  width: calc(100vw - 1.1rem);
+  background-color: rgba(10,20,240,0.5);
+}
+
+.img-box {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.image {
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: auto;
+  height: auto;
+  top: 25%;
+  position: absolute;
+}
+
+.img-sm {
+  position: absolute;
+  width: 15rem;
+  left: 25%;
+  top: 32%;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none; 
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none; 
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s;
+  transform: scale(0.75);
+  /* transform: rotate(180deg); */
+  transition: 200ms ease-in-out;
 }

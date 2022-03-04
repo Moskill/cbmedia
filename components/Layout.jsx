@@ -28,11 +28,11 @@ const Layout = ({children}) => {
           <Services />
         </section>
       </main>
-      <footer className={classes.footer}>
+      {/* <footer className={classes.footer}>
         <span className={classes.logo}>
           <h3>HIER IST DER FOOTER</h3>
         </span>
-      </footer>
+      </footer> */}
     </div>
   )
 }

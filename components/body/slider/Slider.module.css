@@ -22,6 +22,7 @@
   margin: auto;
   width: 100%;
   max-height: calc(100vh - 2rem);
+  margin-top: 2rem;
 }
 
 .right-arrow {
@@ -173,7 +174,7 @@
 @media only screen and (min-width: 992px) {
   .pagination {
     z-index: 24;
-    bottom: 5%;
+    bottom: 10%;
     left: 40%;
     width: 20%;
   }
