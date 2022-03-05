@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from '../styles/Home.module.scss';
 import Header from '../components/header/Header';
 import TopContainer from '../components/body/topContainer/TopContainer';
@@ -9,11 +9,10 @@ import Services from './body/services/Services';
 
 const Layout = ({children}) => {
 
-  const scrollFunc = (e) => {
-    console.log(e);
-  }
+  const [service, setService] = useState('webdesign');
+
   return (
-    <div className={classes.container} onScroll={scrollFunc}>
+    <div className={classes.container}>
       <HTMLHead />
       <main className={classes.main}>
           <RespNav />
@@ -25,7 +24,7 @@ const Layout = ({children}) => {
           <TabContainer />
         </section>
         <section id='service'>
-          <Services />
+          <Services state={service} onChangeService={setService} />
         </section>
       </main>
       {/* <footer className={classes.footer}>

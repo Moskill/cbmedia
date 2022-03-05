@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {webentwicklung, webdesign} from './servicesData';
+import { TabData } from '../catTabs/TabData';
 import classes from './Services.module.css';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa';
 import bildname1 from '../../../assets/xs/webdev/bildname1.jpg';
@@ -14,7 +15,7 @@ const Services = (props) => {
   const length = webentwicklung.length;
 
   let imgArr = [bildname1, bildname2, bildname3, bildname4, bildname5];
-
+  let servArr = ['webentwicklung', 'webdesign', 'logodesign', 'produktfotografie', 'mediendesign', 'consulting'];
   const getImage = (image) => {
     console.log('getImage wurde aufgerufen!')
     switch (image) {
@@ -36,40 +37,34 @@ const Services = (props) => {
     setCurrent(current === 0 ? length -1 : current - 1)
   }
 
-  const selectSlidePerDot = (index) => {
-    setCurrent(index);
-  }
-
-  console.log(imgArr[0].src)
+  console.log(servArr.indexOf(props.state))
 
   return (
-    <div className={classes['container']}>
-      {/* {webentwicklung.map((item, index) => {
-        return <li key={index}>{item.develop1}</li>
+    <>
+      <div style={{backgroundColor: 'limegreen', height: '8rem', width: '100%', position: 'relative'}}>
+      {/* {TabData.map((item, index) => {
+        return <p className={classes['service-item']} onClick={() => props.onChangeService(item.link)}> - {item.link} </p>
       })} */}
-      {/* <Infobox /> */}
-        {/* <div className={classes.pagination}>
+      <p>{props.state}</p>
+      </div>
+      <div className={classes['container']}>
+
+          <FaArrowAltCircleLeft className={classes['left-arrow']} onClick={prevSlide}/>
+          <FaArrowAltCircleRight className={classes['right-arrow']} onClick={nextSlide}/>
+          
           {webentwicklung.map((item, index) => {
-            return <SliderDots key={index} index={index} active={current} onClick={selectSlidePerDot} />
+            return (
+              <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
+                {index === current && ( 
+                  <div className={classes['img-box']}>
+                    <img src={imgArr[index].src} className={classes.image} key={index} alt={item.title}/> 
+                  </div>
+                )}
+              </div>
+            )
           })}
-
-        </div> */}
-        <FaArrowAltCircleLeft className={classes['left-arrow']} onClick={prevSlide}/>
-        <FaArrowAltCircleRight className={classes['right-arrow']} onClick={nextSlide}/>
-        
-        {webentwicklung.map((item, index) => {
-          return (
-            <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
-              {index === current && ( 
-                <div className={classes['img-box']}>
-                  <img src={imgArr[index].src} className={classes.image} key={index} alt={item.title}/> 
-                </div>
-              )}
-            </div>
-          )
-        })}
-    </div>
-
+      </div>
+    </>
   );
 }
 
