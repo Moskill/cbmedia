@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {webentwicklung, webdesign} from './servicesData';
+import {servicesData} from './servicesData';
 import { TabData } from '../catTabs/TabData';
 import classes from './Services.module.css';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa';
@@ -10,12 +10,18 @@ import bildname4 from '../../../assets/xs/webdev/bildname4.jpg';
 import bildname5 from '../../../assets/xs/webdev/bildname5.jpg';
 
 const Services = (props) => {
+  
 
   const [current, setCurrent] = useState(0);
-  const length = webentwicklung.length;
+  const length = servicesData.length;
 
   let imgArr = [bildname1, bildname2, bildname3, bildname4, bildname5];
-  let servArr = ['webentwicklung', 'webdesign', 'logodesign', 'produktfotografie', 'mediendesign', 'consulting'];
+  let servArr = ['webdesign', 'webentwicklung', 'logodesign', 'produktfotografie', 'mediendesign', 'consulting']; 
+
+  // const filterArr = servicesData.filter((item) => {
+  //   return item.consulting == props.state
+  // })
+
   const getImage = (image) => {
     console.log('getImage wurde aufgerufen!')
     switch (image) {
@@ -37,8 +43,9 @@ const Services = (props) => {
     setCurrent(current === 0 ? length -1 : current - 1)
   }
 
-  console.log(servArr.indexOf(props.state))
-
+  // console.log(servArr.indexOf(props.state))
+  // console.log(filterArr)
+  console.log(servicesData[servArr.indexOf(props.state)], 'FCIKENCENNCKEN')
   return (
     <>
       <div style={{backgroundColor: 'limegreen', height: '8rem', width: '100%', position: 'relative'}}>
@@ -52,7 +59,7 @@ const Services = (props) => {
           <FaArrowAltCircleLeft className={classes['left-arrow']} onClick={prevSlide}/>
           <FaArrowAltCircleRight className={classes['right-arrow']} onClick={nextSlide}/>
           
-          {webentwicklung.map((item, index) => {
+          {servicesData.map((item, index) => {
             return (
               <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
                 {index === current && ( 
