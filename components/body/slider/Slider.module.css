@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   overflow: none;
-  top: 3rem;
+  /* top: 3rem; HIER MACHT DER DEN SCHEISS ABSTAND OBEN */
 }
 
 /* .slider::before {
@@ -154,9 +154,15 @@
   .image {
     height: 15.5rem;
     width: 100%;
+    margin-top: 4rem;
   }
+
   .slide-active::before {
     height: calc(50vh - 5rem);
+  }
+
+  .pagination {
+    bottom: 12%;
   }
 }
 

@@ -5,9 +5,8 @@
   margin: 1rem 0rem;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-
 }
 
 .overlay-img {
@@ -71,6 +70,7 @@
 .tab-text {
   font-size: 16px;
   margin-top: -2rem;
+  color: black;
 }
 
 
@@ -78,7 +78,71 @@
 @media only screen and (max-width: 600px) {
   .container {
     height: calc(110vh/4 - 3rem);
-    width: 30%;
+    width: 45%;
+  }
+
+  .tab-body h1 {
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .tab-body h4 {
+    font-weight: 700;
+    font-size: 11px;
+    margin-bottom: 0px;
+    line-height: 1;
+    margin-top: -8px;
+  }
+
+  .tab-icon {
+    font-size: 2rem;
+  }
+
+  .text-box {
+    width: 80%;
+    padding: 0rem;
+  }
+
+  .tab-text {
+    font-size: 10px;
+    line-height: 1;
+  }
+
+  .tab-body {
+    margin: 0px;
+    margin-top: 1rem;
+    max-width: 40%;
+    margin-top: 0px;
+  }
+
+  .tab-btn-container {
+    margin: 0px;
+    margin-top: 0.3rem;
+  }
+  
+  
+  .tab-body button {
+    margin: 0px 5px;
+    font-size: 10px;
+    padding: 0px;
+    border: none;
+    background: #b30303;
+    color: white;
+    padding: 2px 5px;
+    border: 1px solid #aa0000;
+  }
+
+  .container {
+    width: 40%;
+    height: calc(40vh/2 - 2rem);
+    max-height: 25rem;
+    margin: 0rem 0rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
   
 }

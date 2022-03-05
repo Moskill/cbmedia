@@ -12,8 +12,8 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .container {
-    height: calc(100vh/2 - 3rem);
-    margin-top: 4rem;
+    /* height: calc(100vh/2 - 3rem); */
+    margin-top: 0rem;
   }
   
 }
@@ -38,9 +38,5 @@
   
 }
 @media only screen and (max-width: 1200px) {
-  .container {
-    height: calc(100vh/2 - 3rem);
-    margin-top: 4rem;
-    padding-top: 2rem;
-  }
+
 }

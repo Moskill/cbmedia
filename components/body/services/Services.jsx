@@ -62,8 +62,6 @@ const Services = (props) => {
             <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
               {index === current && ( 
                 <div className={classes['img-box']}>
-                  <img src={imgArr[index].src} className={classes['img-sm']} key={index} alt={item.title}/> 
-                  <img src={imgArr[index].src} className={classes.image} key={index} alt={item.title}/> 
                   <img src={imgArr[index].src} className={classes.image} key={index} alt={item.title}/> 
                 </div>
               )}

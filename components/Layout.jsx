@@ -16,15 +16,15 @@ const Layout = ({children}) => {
     <div className={classes.container} onScroll={scrollFunc}>
       <HTMLHead />
       <main className={classes.main}>
-        <section>
           <RespNav />
           <Header />
+        <section id='top'>
           <TopContainer />
         </section>
-        <section>
+        <section id='tabs'>
           <TabContainer />
         </section>
-        <section>
+        <section id='service'>
           <Services />
         </section>
       </main>

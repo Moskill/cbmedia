@@ -71,12 +71,13 @@
   .slider-infobox {
     max-width: 74%;
     left: 10%;
-    top: 1.8rem;
+    top: 5rem;
     padding: 10px;
   }
 
   .slider-infobox p {
     font-size: 10px;
+    line-height: 12px;
   }
 
   .slider-infobox h1 {
@@ -92,7 +93,7 @@
       
   .slider-infobox button {
     font-size: 12px;
-    padding: 8px 24px;
+    padding: 5px 20px;
     margin: 0rem 0.5rem;
   }
 
