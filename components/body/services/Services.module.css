@@ -23,7 +23,7 @@
 .img-sm {
   position: absolute;
   width: 15rem;
-  left: 25%;
+  left: 20rem;
   top: 32%;
 }
 
@@ -55,4 +55,32 @@
   transform: scale(0.75);
   /* transform: rotate(180deg); */
   transition: 200ms ease-in-out;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .img-sm {
+    position: absolute;
+    width: 15rem;
+    left: 4rem;
+    top: 32%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+@media only screen and (max-width: 1200px) {
+
 }

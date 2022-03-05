@@ -1,8 +1,6 @@
 import React from 'react';
 import classes from './SingleTab.module.css';
-import {MdDesignServices} from 'react-icons/md';
-import {MdPhotoCamera} from 'react-icons/md';
-import {MdSupportAgent} from 'react-icons/md';
+import {MdDesignServices, MdPhotoCamera, MdSupportAgent} from 'react-icons/md';
 import {FaCode} from 'react-icons/fa';
 import {IoImages} from 'react-icons/io5';
 import {VscFileMedia} from 'react-icons/vsc';
@@ -58,11 +56,15 @@ console.log(tabImg)
           {tabIcon}
           <h1>{props.title}</h1>
           <h4>{props.subtile}</h4>
-          <div className={classes['text-box']}>
+          {/* <div className={classes['text-box']}>
             <p className={classes['tab-text']}>{props.text}</p>
+          </div> */}
+          <div className={classes['tab-btn-container']}>
+            <button>Beispiele</button>
+            <button>Kontakt</button>
           </div>
         </div>
-        <img src={tabImg.src} className={classes['overlay-img']}/>
+        {/* <img src={tabImg.src} className={classes['overlay-img']}/> */}
       {/* <div className={classes['overlay-img']}></div> */}
       </div>
     </>
