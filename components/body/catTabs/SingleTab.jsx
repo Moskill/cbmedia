@@ -12,7 +12,6 @@ import mediendesign from '../../../assets/xs/mediendesign.jpg';
 import produktfotografie from '../../../assets/xs/produktfotografie.jpg';
 
 const SingleTab = (props) => {
-    console.log(props)
   let tabIcon = '';
   let tabImg = '';
   // let divStyle= {
@@ -45,8 +44,6 @@ const SingleTab = (props) => {
       tabImg = consulting;
       break;
   }
-
-console.log(tabImg)
 
 
   return (
