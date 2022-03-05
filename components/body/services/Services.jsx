@@ -1,25 +1,31 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {servicesData} from './servicesData';
 import { TabData } from '../catTabs/TabData';
 import classes from './Services.module.css';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa';
-import bildname1 from '../../../assets/xs/webdev/bildname1.jpg';
-import bildname2 from '../../../assets/xs/webdev/bildname2.jpg';
-import bildname3 from '../../../assets/xs/webdev/bildname3.jpg';
-import bildname4 from '../../../assets/xs/webdev/bildname4.jpg';
-import bildname5 from '../../../assets/xs/webdev/bildname5.jpg';
+import design1 from '../../../assets/xs/webdev/bildname1.jpg';
+import design2 from '../../../assets/xs/webdev/bildname2.jpg';
+import design3 from '../../../assets/xs/webdev/bildname3.jpg';
+import design4 from '../../../assets/xs/webdev/bildname4.jpg';
+import design5 from '../../../assets/xs/webdev/bildname5.jpg';
+
+import develop1 from '../../../assets/xs/webdev/develop1.jpg';
+import develop2 from '../../../assets/xs/webdev/develop2.jpg';
+import develop3 from '../../../assets/xs/webdev/develop3.jpg';
+import develop4 from '../../../assets/xs/webdev/develop4.jpg';
+import develop5 from '../../../assets/xs/webdev/develop5.jpg';
 
 const Services = (props) => {
+  let imgArr = [design1, design2, design3, design4, design5];
+  let servArr = ['webdesign', 'webentwicklung', 'logodesign', 'produktfotografie', 'mediendesign', 'consulting']; 
   
-
+  const [currentService, setCurrentService] = useState(servArr && servArr.indexOf(props.state))
   const [current, setCurrent] = useState(0);
   const length = servicesData.length;
 
-  let imgArr = [bildname1, bildname2, bildname3, bildname4, bildname5];
-  let servArr = ['webdesign', 'webentwicklung', 'logodesign', 'produktfotografie', 'mediendesign', 'consulting']; 
 
-  // const filterArr = servicesData.filter((item) => {
-  //   return item.consulting == props.state
+  // const filterArr = servicesData[servArr.indexOf(props.state)].filter((match) => {
+  //   return props.state
   // })
 
   const getImage = (image) => {
@@ -35,7 +41,6 @@ const Services = (props) => {
   }
 
   const nextSlide = () => {
-
     setCurrent(current === length - 1 ? 0 : current + 1)
   }
 
@@ -43,23 +48,31 @@ const Services = (props) => {
     setCurrent(current === 0 ? length -1 : current - 1)
   }
 
+  const nextService = () => {
+    setCurrentService(currentService === length - 1 ? 0 : currentService + 1);
+    props.onChangeService(servArr.indexOf(currentService))
+  }
+  const prevService = () => {
+    setCurrentService(currentService === 0 ? length -1 : currentService - 1)
+  }
+
   // console.log(servArr.indexOf(props.state))
-  // console.log(filterArr)
-  console.log(servicesData[servArr.indexOf(props.state)], 'FCIKENCENNCKEN')
+  console.log(currentService)
+  //console.log(servicesData[servArr.indexOf(props.state)].exsamples, 'FCIKENCENNCKEN')
   return (
     <>
       <div style={{backgroundColor: 'limegreen', height: '8rem', width: '100%', position: 'relative'}}>
       {/* {TabData.map((item, index) => {
         return <p className={classes['service-item']} onClick={() => props.onChangeService(item.link)}> - {item.link} </p>
       })} */}
-      <p>{props.state}</p>
+      <span onClick={nextService}>P</span><p> {props.state}</p> <span onClick={prevService}>N</span>
       </div>
       <div className={classes['container']}>
 
           <FaArrowAltCircleLeft className={classes['left-arrow']} onClick={prevSlide}/>
           <FaArrowAltCircleRight className={classes['right-arrow']} onClick={nextSlide}/>
           
-          {servicesData.map((item, index) => {
+          {servicesData[servArr.indexOf(props.state)].exsamples.map((item, index) => {
             return (
               <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
                 {index === current && ( 
