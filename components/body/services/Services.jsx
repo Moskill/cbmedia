@@ -26,10 +26,6 @@ const Services = (props) => {
   const length = servicesData.length;
 
 
-  // const filterArr = servicesData[servArr.indexOf(props.state)].filter((match) => {
-  //   return props.state
-  // })
-
   const getImage = (image) => {
     console.log('getImage wurde aufgerufen!')
     switch (image) {
@@ -59,8 +55,8 @@ const Services = (props) => {
     props.onChangeService(servArr[currentService]);
   }
 
-  // console.log(servArr.indexOf(props.state))
-  console.log(currentService)
+  console.log(props.state)
+  console.log(servicesData[servArr.indexOf(props.state)])
   //console.log(servicesData[servArr.indexOf(props.state)].exsamples, 'FCIKENCENNCKEN')
   return (
     <>
@@ -78,7 +74,7 @@ const Services = (props) => {
                 {index === current && ( 
                   <div className={classes['img-box']}>
                     <ServiceImages service={servArr[currentService]} index={index} alt={props.state} />
-                    <img src={imgArr[index].src} className={classes.image} key={index} alt={item.title}/> 
+                    <img src={imgArr[index].src} className={classes.image} key={index} alt={servArr[currentService]}/> 
                   </div>
                 )}
               </div>

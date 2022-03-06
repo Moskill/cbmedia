@@ -38,8 +38,7 @@ import develop5 from '../../../assets/xs/webdev/develop5.jpg';
 
 const ServiceImages = (props) => {
 
-  console.log(props)
-
+  
   const imgArr = {
     webdesign: [design1, design2, design3, design4, design5],
     development: [develop1, develop2, develop3, develop4, develop5],
@@ -49,9 +48,13 @@ const ServiceImages = (props) => {
     // consult: [consult1, consult2, consult3, consult4, consult5]
   }
 
+  const imgList = Object.entries(imgArr);
+  
+  // console.log(imgList[props.index])
+  console.log(props)
   return (
     <>
-      <img src={props.img} alt={props.alt}/> 
+      <img src={imgList[props.index]} alt={props.alt}/> 
     </>
   )
 }
