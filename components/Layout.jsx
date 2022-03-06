@@ -6,6 +6,7 @@ import RespNav from '../components/header/respNav/RespNav';
 import HTMLHead from '../components/HTMLHead';
 import TabContainer from './body/catTabs/TabContainer';
 import Services from './body/services/Services';
+import Footer from './footer/Footer';
 
 const Layout = ({children}) => {
 
@@ -25,6 +26,9 @@ const Layout = ({children}) => {
         </section>
         <section id='service'>
           <Services state={service} onChangeService={setService} />
+        </section>
+        <section>
+          <Footer />
         </section>
       </main>
       {/* <footer className={classes.footer}>
