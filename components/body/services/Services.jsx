@@ -3,6 +3,8 @@ import {servicesData} from './servicesData';
 import { TabData } from '../catTabs/TabData';
 import classes from './Services.module.css';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa';
+import ServiceImages from './ServiceImages';
+
 import design1 from '../../../assets/xs/webdev/bildname1.jpg';
 import design2 from '../../../assets/xs/webdev/bildname2.jpg';
 import design3 from '../../../assets/xs/webdev/bildname3.jpg';
@@ -19,7 +21,7 @@ const Services = (props) => {
   let imgArr = [design1, design2, design3, design4, design5];
   let servArr = ['webdesign', 'webentwicklung', 'logodesign', 'produktfotografie', 'mediendesign', 'consulting']; 
   
-  const [currentService, setCurrentService] = useState(servArr && servArr.indexOf(props.state))
+  const [currentService, setCurrentService] = useState(servArr.indexOf(props.state))
   const [current, setCurrent] = useState(0);
   const length = servicesData.length;
 
@@ -49,11 +51,12 @@ const Services = (props) => {
   }
 
   const nextService = () => {
-    setCurrentService(currentService === length - 1 ? 0 : currentService + 1);
-    props.onChangeService(servArr.indexOf(currentService))
+    setCurrentService(currentService === servArr.length - 1 ? 0 : currentService + 1);
+    props.onChangeService(servArr[currentService]);
   }
   const prevService = () => {
-    setCurrentService(currentService === 0 ? length -1 : currentService - 1)
+    setCurrentService(currentService === 0 ? servArr.length -1 : currentService - 1)
+    props.onChangeService(servArr[currentService]);
   }
 
   // console.log(servArr.indexOf(props.state))
@@ -62,21 +65,19 @@ const Services = (props) => {
   return (
     <>
       <div style={{backgroundColor: 'limegreen', height: '8rem', width: '100%', position: 'relative'}}>
-      {/* {TabData.map((item, index) => {
-        return <p className={classes['service-item']} onClick={() => props.onChangeService(item.link)}> - {item.link} </p>
-      })} */}
-      <span onClick={nextService}>P</span><p> {props.state}</p> <span onClick={prevService}>N</span>
+      <span onClick={prevService}>P</span><p> {servArr[currentService]}</p> <span onClick={nextService}>N</span>
       </div>
       <div className={classes['container']}>
 
           <FaArrowAltCircleLeft className={classes['left-arrow']} onClick={prevSlide}/>
           <FaArrowAltCircleRight className={classes['right-arrow']} onClick={nextSlide}/>
           
-          {servicesData[servArr.indexOf(props.state)].exsamples.map((item, index) => {
+          {servicesData[servArr.indexOf(props.state)].examples.map((item, index) => {
             return (
               <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
                 {index === current && ( 
                   <div className={classes['img-box']}>
+                    <ServiceImages service={servArr[currentService]} index={index} alt={props.state} />
                     <img src={imgArr[index].src} className={classes.image} key={index} alt={item.title}/> 
                   </div>
                 )}
