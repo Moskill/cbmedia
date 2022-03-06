@@ -51,7 +51,7 @@ const Services = (props) => {
     props.onChangeService(servArr[currentService]);
   }
   const prevService = () => {
-    setCurrentService(currentService === 0 ? servArr.length -1 : currentService - 1)
+    setCurrentService(currentService === 0 ? servArr.length - 1 : currentService - 1)
     props.onChangeService(servArr[currentService]);
   }
 
