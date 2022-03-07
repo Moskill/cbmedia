@@ -25,6 +25,7 @@ const Services = (props) => {
   const [current, setCurrent] = useState(0);
   const length = servicesData.length;
 
+  console.log(Object.entries(servicesData[currentService]));
 
   const getImage = (image) => {
     console.log('getImage wurde aufgerufen!')
@@ -55,26 +56,27 @@ const Services = (props) => {
     props.onChangeService(servArr[currentService]);
   }
 
-  console.log(props.state)
-  console.log(servicesData[servArr.indexOf(props.state)])
+  console.log(servicesData[currentService].text)
+  // console.log(servicesData[servArr.indexOf(props.state)])
   //console.log(servicesData[servArr.indexOf(props.state)].exsamples, 'FCIKENCENNCKEN')
   return (
     <>
-      <div style={{backgroundColor: 'limegreen', height: '8rem', width: '100%', position: 'relative'}}>
-      <span onClick={prevService}>P</span><p> {servArr[currentService]}</p> <span onClick={nextService}>N</span>
+      <div className={classes['service-pagination']}>
+        <button onClick={prevService}>prev</button><span className={classes['service-display']}> {servArr[currentService]}</span><button onClick={nextService}>next</button>
       </div>
+        <p className={classes['service-text']}>{servicesData[currentService].text}</p>
       <div className={classes['container']}>
 
           <FaArrowAltCircleLeft className={classes['left-arrow']} onClick={prevSlide}/>
           <FaArrowAltCircleRight className={classes['right-arrow']} onClick={nextSlide}/>
           
-          {servicesData[servArr.indexOf(props.state)].examples.map((item, index) => {
+          {servicesData[servArr.indexOf(servArr[currentService])].examples.map((item, index) => {
             return (
               <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
                 {index === current && ( 
                   <div className={classes['img-box']}>
-                    <ServiceImages service={servArr[currentService]} index={index} alt={props.state} />
-                    <img src={imgArr[index].src} className={classes.image} key={index} alt={servArr[currentService]}/> 
+                    <ServiceImages service={currentService} index={index} alt={servArr[currentService]} />
+              
                   </div>
                 )}
               </div>

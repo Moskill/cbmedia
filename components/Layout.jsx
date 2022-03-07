@@ -27,7 +27,7 @@ const Layout = ({children}) => {
         <section id='service'>
           <Services state={service} onChangeService={setService} />
         </section>
-        <section>
+        <section id="footer">
           <Footer />
         </section>
       </main>
