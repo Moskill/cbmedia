@@ -112,6 +112,19 @@
   margin-left: 0.5rem;
 }
 
+.main {
+  width: 100%;
+  height: 100%;
+
+  section[id='footer'] {
+    display:flex;
+  }
+  section[id=service] {
+    height: 40vh;
+    scroll-snap-align: none;
+  }
+}
+
 
 @media (max-width: 600px) {
   .grid {
@@ -142,6 +155,7 @@
       section[id=footer] {
         margin-top: 12.3rem;
         height: 20vh;
+        position: relative;
       }
     }
   }
