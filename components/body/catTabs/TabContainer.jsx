@@ -7,6 +7,11 @@ const TabContainer = () => {
   return (
     <>
       <div className={classes.container}>
+
+        {/* <h1>Suchmaschienenfreundlich</h1>
+        <h1>Benutzerfreundlich</h1>
+        <h1>Individuell</h1>
+        <h1>Für Mobile optimiert</h1> */}
         {TabData && TabData.map((item, index) => {
           // {console.log(item.title)}
           return <SingleTab key={index} image={item.image} title={item.title} subtile={item.subtitle} link={item.link} text={item.shortDesc} imgUrl={`../../../assets/xs/${item.image}.jpg`} />

@@ -2,11 +2,12 @@
   width: 33%;
   height: calc(100vh/2 - 3rem);
   max-height: 25rem;
-  margin: 1rem 0rem;
+  margin: 3rem 0rem;
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
+  border: 1px solid #353535;
 }
 
 .overlay-img {
@@ -144,6 +145,7 @@
     flex-wrap: wrap;
     margin-bottom: 1rem;
   }
+
   
 }
 

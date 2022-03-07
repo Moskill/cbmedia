@@ -41,15 +41,17 @@ const Footer = () => {
             <label htmlFor='message'>Nachricht</label><br/>
             <textarea  />
           </div>
-          
-
+          <div className={classes['form-item']}>
+            <button className={classes['form-submit-btn']} type='submit'>Absenden</button>
+          </div>
         </form>
         <hr/>
         <div className={classes['social-bar']}>
           <FaFacebookF className={classes['social-icon']} id='facebook' />
-          <FaWhatsapp className={classes['social-icon']} id='whatsapp'  />
-          <FaDiscord className={classes['social-icon']} id='discord'  />
-          <FaLinkedinIn className={classes['social-icon']} id='linkedin'  />
+          <FaWhatsapp className={classes['social-icon']} id='whatsapp' />
+          <FaDiscord className={classes['social-icon']} id='discord' />
+          <FaLinkedinIn className={classes['social-icon']} id='linkedin' />
+        <span>Tel: 0152 - 22 16 94 70</span>
         </div>
       </div>
     </div>
