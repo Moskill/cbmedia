@@ -1,4 +1,113 @@
 .container {
-  height: 10rem;
   width: 100%;
+  background-color: rgba(35,35,35,0.9);
+  background-image: url('../../assets/egg-shell.png');
+  background-repeat: repeat;
+  border-top: 1px solid rgb(39, 39, 39);
+  box-shadow: -0px -1px 6px rgba(0,0,0,1);
+}
+
+.footer-wrapper {
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.footer-wrapper label {
+  font-size: 14px;
+}
+
+.footer-wrapper hr {
+  height: 2px;
+  border: none;
+  background-color: rgb(26 26 26);
+  border-bottom: 1px solid #767676;
+}
+
+.footer-wrapper textarea {
+  background: rgb(184, 184, 184);
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px solid rgba(30,30,30,0.57);
+  box-shadow: inset 1px 2px 3px rgba(35,35,35,0.9);
+  width: 190%;
+  height: 4rem;
+}
+
+.footer-wrapper input, .form-dropdown {
+  background: rgb(184, 184, 184);
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px solid rgba(30,30,30,0.57);
+  box-shadow: inset 1px 2px 3px rgba(35,35,35,0.9);
+  max-width: 90%;
+}
+
+.container h1, .container label {
+  color: white;
+}
+  
+.container h1 {
+  margin-top: 0rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.form-item {
+  width: 50%;
+}
+
+.form-dropdown{
+  width: 90%;
+}
+
+.social-icon {
+  cursor: pointer;
+  font-size: 36px;
+  padding: 7px;
+  color: white;
+  margin-right: 10px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.social-icon:active {
+  box-shadow: none;
+}
+
+.social-icon[id='facebook'] {
+  background-color: #3b5998;
+}
+
+.social-icon[id='whatsapp'] {
+  background-color: #25D366;
+}
+
+.social-icon[id='discord'] {
+  background-color: #5865F2;
+}
+
+.social-icon[id='linkedin'] {
+  background-color: #0e76a8;
+}
+
+.social-icon[id='facebook'] {
+  background-color: #3b5998;
+}
+
+.social-icon[id='whatsapp'] {
+  background-color: #25D366;
+}
+
+.social-icon[id='discord'] {
+  background-color: #5865F2;
+}
+
+.social-icon[id='linkedin'] {
+  background-color: #0e76a8;
 }
