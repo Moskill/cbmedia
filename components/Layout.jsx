@@ -10,14 +10,16 @@ import Footer from './footer/Footer';
 
 const Layout = ({children}) => {
 
+  
   const [service, setService] = useState('webdesign');
+  console.log(service, 'Layout')
 
   return (
     <div className={classes.container}>
       <HTMLHead />
       <main className={classes.main}>
-          <RespNav />
-          <Header />
+          <RespNav onChangeService={setService} />
+          <Header onChangeService={setService}  />
         <section id='top'>
           <TopContainer />
         </section>
@@ -31,11 +33,6 @@ const Layout = ({children}) => {
           <Footer />
         </section>
       </main>
-      {/* <footer className={classes.footer}>
-        <span className={classes.logo}>
-          <h3>HIER IST DER FOOTER</h3>
-        </span>
-      </footer> */}
     </div>
   )
 }
