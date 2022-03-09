@@ -117,6 +117,7 @@
     margin-bottom: 0px;
     line-height: 1;
     margin-top: -8px;
+    height: 2rem;
   }
 
   .tab-icon {
@@ -254,6 +255,7 @@
 
   .text-box {
     width: 90%;
+    height: 3rem;
   }
 }
 
