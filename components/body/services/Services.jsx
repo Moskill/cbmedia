@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {servicesData} from './servicesData';
 import { TabData } from '../catTabs/TabData';
 import classes from './Services.module.css';
-import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa';
+import {FaArrowAltCircleRight, FaArrowAltCircleLeft, FaArrowRight, FaArrowLeft} from 'react-icons/fa';
 import ServiceImages from './ServiceImages';
 
 import design1 from '../../../assets/xs/webdev/bildname1.jpg';
@@ -62,7 +62,7 @@ const Services = (props) => {
   return (
     <>
       <div className={classes['service-pagination']}>
-        <button onClick={prevService}>prev</button><span className={classes['service-display']}> {servArr[currentService]}</span><button onClick={nextService}>next</button>
+        <FaArrowLeft onClick={prevService} /><span className={classes['service-display']}> {servArr[currentService]}</span><FaArrowRight onClick={nextService} />
       </div>
         <p className={classes['service-text']}>{servicesData[currentService].text}</p>
       <div className={classes['container']}>
