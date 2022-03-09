@@ -3,11 +3,11 @@ import classes from './Header.module.css';
 import Logo from './logo/Logo';
 import Navbar from './navigation/Navbar';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className={classes.wrapper}>
       <Logo />
-      <Navbar />
+      <Navbar onChangeService={props.onChangeService} />
     </div>
   )
 }

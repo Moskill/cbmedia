@@ -8,7 +8,7 @@ const Footer = () => {
     <div className={classes.container}>
       <div className={classes['footer-wrapper']}>
         <h1>Kontakt</h1>
-        <form className={classes['contact-form']}>
+        <form className={classes['contact-form']} id='msg-form'>
           <div className={classes['form-item']}>
             <label htmlFor='name'>Name</label><br/>
             <input type='text' name='name'/>
@@ -41,10 +41,8 @@ const Footer = () => {
             <label htmlFor='message'>Nachricht</label><br/>
             <textarea  />
           </div>
-          <div className={classes['form-item']}>
-            <button className={classes['form-submit-btn']} type='submit'>Absenden</button>
-          </div>
         </form>
+            <button className={classes['form-submit-btn']} type='submit' form='msg-form'>Absenden</button>
         <hr/>
         <div className={classes['social-bar']}>
           <FaFacebookF className={classes['social-icon']} id='facebook' />

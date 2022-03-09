@@ -51,7 +51,7 @@ const ServiceImages = (props) => {
   const imgList = Object.entries(imgArr);
   
   // console.log(imgList[props.index])
-  console.log(imgList[props.service][1][props.index].src)
+  // console.log(imgList[props.service][1][props.index].src)
   return (
     <>
       <img src={imgList[props.service][1][props.index].src} alt={props.alt}/> 

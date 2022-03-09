@@ -25,7 +25,7 @@ const Services = (props) => {
   const [current, setCurrent] = useState(0);
   const length = servicesData.length;
 
-  console.log(Object.entries(servicesData[currentService]));
+  // console.log(Object.entries(servicesData[currentService]));
 
   const getImage = (image) => {
     console.log('getImage wurde aufgerufen!')
@@ -56,7 +56,7 @@ const Services = (props) => {
     props.onChangeService(servArr[currentService]);
   }
 
-  console.log(servicesData[currentService].text)
+  // console.log(servicesData[currentService].text)
   // console.log(servicesData[servArr.indexOf(props.state)])
   //console.log(servicesData[servArr.indexOf(props.state)].exsamples, 'FCIKENCENNCKEN')
   return (
