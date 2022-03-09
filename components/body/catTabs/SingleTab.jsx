@@ -53,9 +53,9 @@ const SingleTab = (props) => {
           {tabIcon}
           <h1>{props.title}</h1>
           <h4>{props.subtile}</h4>
-          {/* <div className={classes['text-box']}>
+          <div className={classes['text-box']}>
             <p className={classes['tab-text']}>{props.text}</p>
-          </div> */}
+          </div>
           <div className={classes['tab-btn-container']}>
             <button>Beispiele</button>
             <button>Kontakt</button>

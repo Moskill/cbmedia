@@ -7,7 +7,14 @@
   align-items: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
-  border: 1px solid #353535;
+  border: 1px solid #c2c2c2;
+  transition: all ease-in 400ms;
+  background: transparent;
+}
+
+.container:hover {
+  transition: background ease-out 400ms;
+  background-color: #f7f7f7;
 }
 
 .container button {
@@ -41,7 +48,7 @@
   position: absolute;
   margin: 0px;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   color: #b30303;
   align-items: center;
   max-width: 30%;
@@ -89,8 +96,13 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .container {
-    height: calc(110vh/4 - 3rem);
+    height: 11rem;
     width: 45%;
+  }
+
+  .tab-text {
+    font-size: 12px;
+    margin-top: 0rem;
   }
 
   .tab-body h1 {
@@ -146,8 +158,8 @@
   }
 
   .container {
-    width: 40%;
-    height: calc(40vh/2 - 2rem);
+    width: 45%;
+    /* height: calc(40vh/2 - 2rem); */
     max-height: 25rem;
     margin: 0rem 0rem;
     display: flex;
@@ -203,7 +215,31 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .tab-body h1 {
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+
+  }
   
+  .tab-body h4 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    line-height: 1;
+    margin-top: 0rem;
+  }
+  .tab-body button {
+    margin: 0px 5px;
+    font-size: 14px;
+    padding: 0px;
+    border: none;
+    background: #b30303;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #aa0000;
+  }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1024px) {

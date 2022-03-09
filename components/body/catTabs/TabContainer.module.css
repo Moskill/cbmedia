@@ -12,8 +12,9 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .container {
-    /* height: calc(100vh/2 - 3rem); */
+    justify-content: space-around;
     margin-top: 0rem;
+    height: 35rem;
   }
   
 }
