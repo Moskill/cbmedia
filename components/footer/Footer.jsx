@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Footer.module.css';
 import { FaFacebookF, FaWhatsapp, FaDiscord, FaLinkedinIn } from 'react-icons/fa';
+import FooterNavigation from './FooterNavigation';
 
 
 const Footer = () => {
@@ -51,6 +52,7 @@ const Footer = () => {
           <FaLinkedinIn className={classes['social-icon']} id='linkedin' />
         <span>Tel: 0152 - 22 16 94 70</span>
         </div>
+        <FooterNavigation />
       </div>
     </div>
   )
