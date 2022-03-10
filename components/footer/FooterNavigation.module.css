@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.container div {
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+.container div:hover {
+  color: #b30303;
+}
