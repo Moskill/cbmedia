@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .slider {
   position: relative;
   justify-content: center;
@@ -5,14 +7,6 @@
   overflow: none;
   /* top: 3rem; HIER MACHT DER DEN SCHEISS ABSTAND OBEN */
 }
-
-/* .slider::before {
-  content: '';
-  position: relative;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(0,212,255,0) 80%);
-  width: 100%; 
-  height: calc(100vh - 5rem);
-} */
 
 .image {
   height: auto;
@@ -55,65 +49,10 @@
   transition: 200ms ease-in-out;
 }
 
-/* .slide-active::before {
-  content: '';
-  background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(0,212,255,0) 80%);
-  width: 100%; 
-  height: calc(100vh - 5rem);
-  position: absolute;
-  transition: all ease-in;
-} */
-
 .slide-active {
   opacity: 1;
   transition-duration: 1s ;
   transform: scale(1.0);
-}
-
-.slider-infobox {
-  background-color: rgba(0,0,0,0.2);
-  max-width: 40%;
-  position: absolute;
-  left: 10%;
-  top: 5rem;
-  padding: 2rem;
-  z-index: 20;
-  box-shadow: 7px 7px 15px rgba(0,0,0,0.5);
-  border-radius: 10px;
-}
-
-.slider-infobox h1 {
-  font-size: 36px;
-  color: #353535;
-  margin-bottom: 0px;
-  margin-top: 0rem;
-}
-
-.slider-subtitle {
-  font-family: 'Ubuntu';
-  color: #b30303;
-  font-size: 20px;
-  font-weight: 200;
-}
-
-.slider-infobox p {
-  font-size: 16px;
-}
-
-.slider-infobox button {
-  border-radius: 2px;
-  background: #b30303;
-  color: white;
-  font-size: 20px;
-  padding: 15px 35px;
-  border: none;
-  margin-top: 2rem;
-}
-
-.slider-btn-box {
-  display: flex;
-  justify-content: space-between;
-  max-width: 45%;
 }
 
 .pagination {
@@ -132,7 +71,7 @@
   width: 20px;
   height: 20px; 
   border-radius: 50%;
-  background-color: #b30303;
+  background-color: $mainred;
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -1,0 +1,43 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+$darkgrey: #353535;
+$mainred: #b30303;
+$darkred: #a10000;
+$redBorder: 1px solid #aa0000;
+$boxShadow: 1px 1px 3px rgba(0,0,0,0.5);
+$lightgrey: #f1f1f1;
+$mainFont: 'Ubuntu';
+
+
+@function set-text-color($color) {
+  @if(lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Margin und Padding
+$spaces:  (1,2,3,4,5,6,7,8,9);
+
+@each $space in $spaces {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0rem;
+  }
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0rem;
+  }
+}
+
+$fontSizes: (8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40);
+
+@each $size in $fontSizes {
+  .fo-#{$size} {
+    font-size: #{$size}px;
+  }
+}

@@ -262,8 +262,13 @@
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .tab-text {
-    font-size: 16px;
+    font-size: 14px;
   }
+  .text-box {
+    width: 100%;
+    padding: 1rem;
+    height: 4rem;
+}
 }
