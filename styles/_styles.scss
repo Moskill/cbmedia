@@ -1,0 +1,8 @@
+@mixin inputStyle {
+  background: rgb(184, 184, 184);
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px solid rgba(30,30,30,0.57);
+  box-shadow: inset 1px 2px 3px rgba(35,35,35,0.9);
+  max-width: 90%;
+}

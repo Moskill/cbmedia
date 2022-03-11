@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import classes from './Slider.module.css';
+import classes from './Slider.module.scss';
 import design from '../../../assets/design.jpg';
 import development from '../../../assets/development.jpg';
 import photographic from '../../../assets/photographic.jpg';

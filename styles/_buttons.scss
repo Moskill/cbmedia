@@ -1,0 +1,32 @@
+@mixin darkBtn($padding, $fontSize, $marginLeft) {
+  position: relative;
+  border: $redBorder;
+  color: white;
+  background: $mainred;
+  padding: $padding;
+  box-shadow: $boxShadow;
+  font-size: $fontSize;
+  margin-left: $marginLeft;
+    &:hover, &:active {
+      color: darken(white, 10%);
+      box-shadow: none;
+      background: darken($mainred, 3%);
+    }
+}
+
+@mixin lightBtn($padding, $fontSize, $marginLeft) {
+  position: relative;
+  border: $redBorder;
+  color: $mainred;
+  background: white;
+  padding: $padding;
+  box-shadow: $boxShadow;
+  font-size: $fontSize;
+  margin-left: $marginLeft;
+  &:hover, &:active {
+    color: darken($mainred, 3%);
+    box-shadow: none;
+    background: $lightgrey;
+  }
+}
+

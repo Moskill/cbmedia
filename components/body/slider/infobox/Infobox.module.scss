@@ -1,14 +1,13 @@
-/* .slider-infobox::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.3);
-  border-radius: 10px;
-  z-index: 1;
-  left: 0%;
-  top: 0rem;
-} */
+@import "../../../../styles/interface.scss";
+
+%btn {
+  position: relative;
+  border: $redBorder;
+  box-shadow: $boxShadow;
+  &:hover, &:active {
+    box-shadow: none;
+  }
+}
 
 .slider-infobox {
   background-color: rgba(255,255,255,0.7);
@@ -25,7 +24,6 @@
 }
 
 .slider-infobox h1 {
-  font-size: 36px;
   color: #353535;
   margin-bottom: 0px;
   margin-top: 0rem;
@@ -42,20 +40,17 @@
   font-size: 16px;
 }
 
-.slider-infobox button {
-  border-radius: 1px;
-  background: #b30303;
-  border: 1px solid #9b0000;
-  color: white;
-  font-size: 20px;
-  padding: 15px 35px;
-  margin: 1rem 0.5rem;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+.darkBtn {
+  @include darkBtn(8px 16px, 16px, 1rem);
 }
 
-.slider-infobox button:hover {
+.lightBtn {
+  @include lightBtn(8px 16px, 16px, 1rem);
+}
+
+.lightBtn:hover {
   box-shadow: none;
-  background: #9b0000;
+  background: $lightgrey;
 }
 
 .slider-btn-box {
@@ -64,10 +59,16 @@
   max-width: 45%;
 }
 
-
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .darkBtn {
+    @include darkBtn(5px 10px, 12px, 0.2rem);
+  }
+  
+  .lightBtn {
+    @include lightBtn(5px 10px, 12px, 0.4rem);
+  }
+  
   .slider-infobox {
     max-width: 74%;
     left: 10%;
@@ -91,11 +92,11 @@
     margin: 0px;
   }
       
-  .slider-infobox button {
-    font-size: 12px;
-    padding: 5px 20px;
-    margin: 0rem 0.5rem;
-  }
+  // .slider-infobox button {
+  //   font-size: 12px;
+  //   padding: 5px 20px;
+  //   margin: 0rem 0.5rem;
+  // }
 
   .slider-btn-box {
     max-width: 30%;
@@ -116,7 +117,7 @@
   }
 
   .slider-infobox h1 {
-    font-size: 24px;
+    // font-size: 24px;
     color: #353535;
     margin-bottom: 0px;
     margin-top: 0rem;
@@ -148,7 +149,7 @@
   }
 
   .slider-infobox h1 {
-    font-size: 24px;
+    // font-size: 24px;
     color: #353535;
     margin-bottom: 0px;
     margin-top: 0rem;
@@ -179,10 +180,9 @@
   }
 
   .slider-infobox h1 {
-    font-size: 28px;
     color: #353535;
-    margin-bottom: 0px;
-    margin-top: 0rem;
+    // margin-bottom: 0px;
+    // margin-top: 0rem;
   }
 
   .slider-subtitle {

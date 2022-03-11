@@ -9,9 +9,9 @@ import Services from './body/services/Services';
 import Footer from './footer/Footer';
 
 const Layout = ({children}) => {
-
   
   const [service, setService] = useState('webdesign');
+  const [page, setPage] = useState('index');
   console.log(service, 'Layout')
 
   return (
@@ -23,15 +23,26 @@ const Layout = ({children}) => {
         <section id='top'>
           <TopContainer />
         </section>
-        <section id='tabs'>
-          <TabContainer />
-        </section>
-        <section id='service'>
-          <Services state={service} onChangeService={setService} />
-        </section>
-        <section id="footer">
-          <Footer />
-        </section>
+        {page === 'index' && (
+          <>
+            <section id='tabs'>
+              <TabContainer />
+            </section>
+            <section id='service'>
+              <Services state={service} onChangeService={setService} />
+            </section>
+            <section id="footer">
+              <Footer />
+            </section>
+          </>
+        )}
+        {page === 'about' && (
+          <>
+            <h1>Hello World</h1>
+          </>
+        )}
+
+
       </main>
     </div>
   )
