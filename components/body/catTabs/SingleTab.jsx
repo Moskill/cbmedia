@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './SingleTab.module.css';
+import classes from './SingleTab.module.scss';
 import {MdDesignServices, MdPhotoCamera, MdSupportAgent} from 'react-icons/md';
 import {FaCode} from 'react-icons/fa';
 import {IoImages} from 'react-icons/io5';
@@ -57,8 +57,8 @@ const SingleTab = (props) => {
             <p className={classes['tab-text']}>{props.text}</p>
           </div>
           <div className={classes['tab-btn-container']}>
-            <button>Beispiele</button>
-            <button>Kontakt</button>
+            <button className={classes['darkBtn']}>Beispiele</button>
+            <button className={classes['lightBtn']}>Kontakt</button>
           </div>
         </div>
         {/* <img src={tabImg.src} className={classes['overlay-img']}/> */}
