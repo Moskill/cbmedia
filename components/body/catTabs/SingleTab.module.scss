@@ -1,3 +1,5 @@
+@import '../../../styles/interface.scss';
+
 .container {
   width: 33%;
   height: calc(100vh/2 - 3rem);
@@ -17,15 +19,23 @@
   background-color: #f7f7f7;
 }
 
-.container button {
-  position: relative;
-  border: rgb(120, 0, 0);
-  color: white;
-  background: #b30303;
-  padding: 10px 15px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-  font-size: 16px;
-  margin-left: 1rem;
+// .container button {
+//   position: relative;
+//   border: rgb(120, 0, 0);
+//   color: white;
+//   background: #b30303;
+//   padding: 10px 15px;
+//   box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+//   font-size: 16px;
+//   margin-left: 1rem;
+// }
+
+.darkBtn {
+  @include darkBtn(8px 16px, 16px, 1rem);
+}
+
+.lightBtn {
+  @include lightBtn(8px 16px, 16px, 1rem);
 }
 
 .overlay-img {
@@ -48,7 +58,7 @@
   position: absolute;
   margin: 0px;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #b30303;
   align-items: center;
   max-width: 30%;
@@ -87,7 +97,7 @@
 }
 
 .tab-text {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: -2rem;
   color: black;
 }
@@ -187,15 +197,12 @@
     line-height: 1;
     margin-top: 0rem;
   }
-  .tab-body button {
-    margin: 0px 5px;
-    font-size: 14px;
-    padding: 0px;
-    border: none;
-    background: #b30303;
-    color: white;
-    padding: 5px 10px;
-    border: 1px solid #aa0000;
+  .darkBtn {
+    @include darkBtn(6px 8px, 14px, 1rem);
+  }
+  
+  .lightBtn {
+    @include lightBtn(6px 8px, 14px, 1rem);
   }
 }
 
@@ -243,6 +250,25 @@
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1024px) {
+  .tab-text {
+    font-size: 14px;
+  }
+
+  .text-box {
+    width: 100%;
+    min-height: 4.5rem;
+    max-height: 5rem;
+  }
+  .tab-icon {
+    font-size: 3rem;
+  }
+  .container {
+    min-height: 16rem;
+    max-height: 20rem;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .overlay-img {
     opacity: 0.6;
@@ -263,12 +289,12 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
-  .tab-text {
-    font-size: 14px;
-  }
-  .text-box {
-    width: 100%;
-    padding: 1rem;
-    height: 4rem;
-}
+//   .tab-text {
+//     font-size: 14px;
+//   }
+//   .text-box {
+//     width: 100%;
+//     padding: 1rem;
+//     height: 4rem;
+// }
 }
