@@ -18,6 +18,8 @@ const SingleTab = (props) => {
   //   backgroundImage: "url(" + `${consulting}` + ")"
   // }
 
+  console.log(props)
+
   switch (props.image) {
     case 'webdesign':
       tabIcon = <MdDesignServices className={classes['tab-icon']}/>
@@ -57,7 +59,7 @@ const SingleTab = (props) => {
             <p className={classes['tab-text']}>{props.text}</p>
           </div>
           <div className={classes['tab-btn-container']}>
-            <button className={classes['darkBtn']}>Beispiele</button>
+            {props.link !== 'webentwicklung' && props.link !== 'consulting' && <button className={classes['darkBtn']}>Beispiele</button>}
             <button className={classes['lightBtn']}>Kontakt</button>
           </div>
         </div>
