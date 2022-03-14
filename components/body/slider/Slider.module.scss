@@ -21,7 +21,7 @@
 
 .right-arrow {
   position: absolute;
-  top: 50%;
+  top: 20rem;
   right: 32px;
   font-size: 3rem;
   color: #000;
@@ -32,7 +32,7 @@
 
 .left-arrow {
   position: absolute;
-  top: 50%;
+  top: 20rem;
   left: 32px;
   font-size: 3rem;
   color: #000;
@@ -119,7 +119,7 @@
 @media only screen and (min-width: 992px) {
   .pagination {
     z-index: 24;
-    bottom: 10%;
+    top: 35rem;
     left: 40%;
     width: 20%;
   }
@@ -127,5 +127,10 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  
+  .pagination {
+    z-index: 24;
+    top: 53rem;
+    left: 40%;
+    width: 20%;
+  }
 }

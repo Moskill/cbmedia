@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import RespNav from '../respNav/RespNav';
 import classes from './Navbar.module.scss';
+import ExpandNav from './ExpandNav';
 
 const Navbar = (props) => {
 
-  const [showExpandNav, setShowExpandNav] = useState(true);
+  const [showExpandNav, setShowExpandNav] = useState(false);
    console.log(showExpandNav)
   return (
     <>
@@ -15,7 +16,10 @@ const Navbar = (props) => {
         <li className={classes.navElement}>Kontakt</li>
       </ul>
 
-      {showExpandNav && <div className={classes['expand-nav']} onClick={() => setShowExpandNav(false)}>
+      {showExpandNav && <ExpandNav onExpandNav={setShowExpandNav} onChangeService={props.onChangeService}  />
+      
+      }
+      {/* {showExpandNav && <div className={classes['expand-nav']} onClick={() => setShowExpandNav(false)}>
         <ul onClick={() => setShowExpandNav(false)}>
           <li>Webdesign</li>
           <li>Webentwicklung</li>
@@ -25,7 +29,7 @@ const Navbar = (props) => {
           <li>Beratung</li>
         </ul>
       </div>
-      }
+      } */}
     </>
   )
 }
