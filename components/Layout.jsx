@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import classes from '../styles/Home.module.scss';
 import Header from '../components/header/Header';
 import TopContainer from '../components/body/topContainer/TopContainer';
@@ -8,7 +9,15 @@ import TabContainer from './body/catTabs/TabContainer';
 import Services from './body/services/Services';
 import Footer from './footer/Footer';
 
+// const imgLoader = ({ src, width, quality }) => {
+//   return `http://prepper-survial.org/${src}?w=${width}&q=${quality || 75}`
+// }
 const Layout = ({children}) => {
+  useEffect(() => {
+    fetch("http://localhost:3000/api/")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
   
   const [service, setService] = useState('webdesign');
   const [page, setPage] = useState('index');
@@ -38,7 +47,14 @@ const Layout = ({children}) => {
         )}
         {page === 'about' && (
           <>
-            <h1>Hello World</h1>
+            <Image 
+            style={{position: 'absolute'}}
+              src="logo5.jpg"
+              alt="Picture of the author"
+              // width={400}
+              // height={300}
+              layout='fill'
+            />
           </>
         )}
 

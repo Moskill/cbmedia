@@ -1,0 +1,30 @@
+@import '../../../styles/interface.scss';
+
+.container {
+  position: absolute;
+}
+
+.expand-nav {
+  position: absolute;
+  top: 100%;
+  right: 25%;
+  z-index: 99;
+  background: $darkgrey;
+  color: white;
+  border-top: 4px solid $mainred;
+  box-shadow: $boxShadow;
+  width: 10rem;
+    ul {
+      list-style-type: none;
+      margin-left: -1rem;
+      margin-right: 1rem;
+    }
+    li {
+      cursor: pointer;
+      &:hover, &:active {
+        color: $mainred;
+        transition: all ease-out 200ms;
+        padding-left: 2px;
+      }
+    }
+}
