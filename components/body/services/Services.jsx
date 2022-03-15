@@ -23,7 +23,7 @@ const Services = (props) => {
   
   const [currentService, setCurrentService] = useState(servArr.indexOf(props.state))
   const [current, setCurrent] = useState(0);
-  const length = props.images[currentService].length;
+  const length = props.images && props.images[currentService].length;
 
   // props.images && props.images[currentService].map((item, index) => {
   //   console.log(index)
