@@ -10,15 +10,6 @@ export const servicesData =
       examples: ['design1', 'design2', 'design3', 'design4', 'design5']
     },
     {
-      image: 'webentwicklung',
-      title: 'WEBENTWICKLUNG',
-      link: 'webentwicklung',
-      subtitle: 'Back- und Frontendlösungen',
-      text:'Muss hier noch irgenwas gescheites schereiben ^^ ',
-      shortDesc: 'Wir erarbeiten Lösungen sowohl im Backend- als auch im Frontend-Bereich.',
-      examples: ['develop1', 'develop2', 'develop3', 'develop4', 'develop5']
-    },
-    {
       image: 'logodesign',
       title: 'LOGODESIGN',
       link: 'logodesign',
@@ -44,14 +35,5 @@ export const servicesData =
       text:'Wir gestalten diverse Printmedien für Ihr Business. Ob Flyer, Plakate, Banner oder Visitenkarten - geht nicht, gibts nicht! Auf Wunsch designen wir auch Broschüren oder ganze Kataloge. Teilen Sie uns einfach Ihre Wünsche mit und wir erarbeiten geminsam die passende Lösung.',
       shortDesc: 'Flyer, Banner, Bröschüren, Plakate, Kataloge uvm.',
       examples: ['media1', 'media2', 'media3', 'media4', 'media5']
-    },
-    {
-      image: 'consulting',
-      title: 'CONSULTING',
-      link: 'consulting',
-      subtitle: 'Beratung für Ihren Online-Handel',
-      text:'Sie planen einen Online-Shop zu eröffnen oder Ihre Produkte im Online-Handel anzubieten? Oder sehen Sie für Ihren vorhandenen Online-Shop noch Verbesserungspotential? Profitieren Sie von unserer fast 20-jährigen Erfahrung rund um den Online-Handel. Wir helfen Ihnen einen Webvertrieb aufzubauen, oder untersuchen Ihren Vorhanden auf Schwachstellen.',
-      shortDesc: 'Mit fast 20 Jahren Erfahrung beraten wir Sie in allen Fragen rund um eCommerce.',
-      examples: ['consult1', 'consult2', 'consult3', 'consult4', 'consult5']
     }
   ]

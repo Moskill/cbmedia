@@ -8,20 +8,19 @@ import HTMLHead from '../components/HTMLHead';
 import TabContainer from './body/catTabs/TabContainer';
 import Services from './body/services/Services';
 import Footer from './footer/Footer';
+import useSWR from 'swr';
 
 // const imgLoader = ({ src, width, quality }) => {
 //   return `http://prepper-survial.org/${src}?w=${width}&q=${quality || 75}`
 // }
 const Layout = ({children}) => {
-  useEffect(() => {
-    fetch("http://localhost:3000/api/")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);
-  
+  const fetcher = (url) => fetch(url).then((res) => res.json());
+  const { data } = useSWR('/api/readfiles', fetcher);
+
   const [service, setService] = useState('webdesign');
   const [page, setPage] = useState('index');
-  console.log(service, 'Layout')
+
+  console.log(data)
 
   return (
     <div className={classes.container}>
@@ -38,7 +37,7 @@ const Layout = ({children}) => {
               <TabContainer />
             </section>
             <section id='service'>
-              <Services state={service} onChangeService={setService} />
+              <Services state={service} onChangeService={setService} images={data}/>
             </section>
             <section id="footer">
               <Footer />
@@ -47,14 +46,9 @@ const Layout = ({children}) => {
         )}
         {page === 'about' && (
           <>
-            <Image 
-            style={{position: 'absolute'}}
-              src="logo5.jpg"
-              alt="Picture of the author"
-              // width={400}
-              // height={300}
-              layout='fill'
-            />
+            {!data && "Loading..."}
+            {data && data.map(catPath => 
+            catPath.map(imgPath => <img src={imgPath} alt=""/>))}
           </>
         )}
 

@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     loader: 'imgix',
     path: 'http://prepper-survival.org/',
+  },
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname
   }
 }
 

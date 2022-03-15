@@ -19,25 +19,15 @@ import develop5 from '../../../assets/xs/webdev/develop5.jpg';
 
 const Services = (props) => {
   let imgArr = [design1, design2, design3, design4, design5];
-  let servArr = ['webdesign', 'webentwicklung', 'logodesign', 'produktfotografie', 'mediendesign', 'consulting']; 
+  let servArr = ['webdesign', 'logodesign', 'produktfotografie', 'mediendesign']; 
   
   const [currentService, setCurrentService] = useState(servArr.indexOf(props.state))
   const [current, setCurrent] = useState(0);
-  const length = servicesData.length;
+  const length = props.images[currentService].length;
 
-  // console.log(Object.entries(servicesData[currentService]));
-
-  const getImage = (image) => {
-    console.log('getImage wurde aufgerufen!')
-    switch (image) {
-      case 'design':
-        return design.src;  
-      case 'development':
-        return development.src;  
-      case 'photographic':
-        return photographic.src;  
-    }
-  }
+  // props.images && props.images[currentService].map((item, index) => {
+  //   console.log(index)
+  // })
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
@@ -70,13 +60,14 @@ const Services = (props) => {
           <FaArrowAltCircleLeft className={classes['left-arrow']} onClick={prevSlide}/>
           <FaArrowAltCircleRight className={classes['right-arrow']} onClick={nextSlide}/>
           
-          {servicesData[servArr.indexOf(servArr[currentService])].examples.map((item, index) => {
+          {props.images && props.images[currentService].map((item, index) => {
             return (
               <div className={index === current ? classes['slide-active'] : classes.slide} key={index}>
                 {index === current && ( 
+                  
                   <div className={classes['img-box']}>
-                    <ServiceImages service={currentService} index={index} alt={servArr[currentService]} />
-              
+                    <ServiceImages service={currentService} index={index} alt={servArr[currentService]} image={props.images && props.images[currentService][index]}/>
+                    {console.log(item)}
                   </div>
                 )}
               </div>
