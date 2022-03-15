@@ -18,7 +18,6 @@ const SingleTab = (props) => {
   //   backgroundImage: "url(" + `${consulting}` + ")"
   // }
 
-  console.log(props)
 
   switch (props.image) {
     case 'webdesign':
