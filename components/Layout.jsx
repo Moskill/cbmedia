@@ -20,7 +20,7 @@ const Layout = ({children}) => {
   const [service, setService] = useState('webdesign');
   const [page, setPage] = useState('index');
 
-  console.log(data)
+  console.log(service)
 
   return (
     <div className={classes.container}>
@@ -37,7 +37,7 @@ const Layout = ({children}) => {
               <TabContainer />
             </section>
             <section id='service'>
-              <Services state={service} onChangeService={setService} images={data}/>
+              <Services id='services' state={service} onChangeService={setService} images={data}/>
             </section>
             <section id="footer">
               <Footer />
