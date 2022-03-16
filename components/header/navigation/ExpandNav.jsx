@@ -3,18 +3,23 @@ import classes from './ExpandNav.module.scss';
 
 const ExpandNav = (props) => {
 
-  console.log(props)
+  const changesHandler = (e) => {
+    console.log(e.target.id);
+    props.onChangeService(e.target.id)
+    props.onExpandNav(false);
+  }
+
 
   return (
     <>
       <div className={classes['expand-nav']}>
         <ul >
-          <li><a href='#service' onClick={() => props.onChangeService('webdesign')}> Webdesign</a></li>
-          <li><a href='#service' onClick={() => props.onChangeService('webentwicklung')}>Webentwicklung</a></li>
-          <li><a href='#service' onClick={() => props.onChangeService('logodesign')}>Logodesign</a></li>
-          <li><a href='#service' onClick={() => props.onChangeService('produktfotos')}>Produktfotos</a></li>
-          <li><a href='#service' onClick={() => props.onChangeService('mediendesign')}>Mediendesign</a></li>
-          <li><a href='#service' onClick={() => props.onChangeService('consulting')}>Beratung</a></li>
+          <li onClick={changesHandler}><a id='webdesign' href='#service'>Webdesign</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('webentwicklung')}>Webentwicklung</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('logodesign')}>Logodesign</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('produktfotos')}>Produktfotos</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('mediendesign')}>Mediendesign</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('consulting')}>Beratung</a></li>
         </ul>
       </div>
       <div className={classes['closing-overlay']} onMouseOver={() => props.onExpandNav(false)}></div>
