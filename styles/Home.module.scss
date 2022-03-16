@@ -120,7 +120,7 @@
   section[id=tabs], section[id=service] {
     width: 75%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
   }
 
   section[id=footer] {
@@ -132,8 +132,9 @@
     scroll-snap-align: none;
     margin-top: 5rem;
     background: #efefef;
-    min-height: 90vh;
+    min-height: 96vh;
     margin-bottom: 2rem;
+    padding-top: 4rem;
   }
 }
 

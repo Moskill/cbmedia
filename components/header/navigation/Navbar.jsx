@@ -5,7 +5,7 @@ import ExpandNav from './ExpandNav';
 
 const Navbar = (props) => {
 
-  const [showExpandNav, setShowExpandNav] = useState(false);
+  const [showExpandNav, setShowExpandNav] = useState(true);
   //  console.log(showExpandNav)
   return (
     <>

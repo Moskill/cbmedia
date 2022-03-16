@@ -7,7 +7,7 @@
 .expand-nav {
   position: absolute;
   top: 100%;
-  right: 25%;
+  right: 20%;
   z-index: 99;
   background: $darkgrey;
   color: white;
@@ -27,4 +27,90 @@
         padding-left: 2px;
       }
     }
+}
+
+.closing-overlay {
+  position: absolute;
+  top: 106%;
+  right: 0%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: calc(100vh - 3rem);
+}
+
+
+/** CSS für alle **/
+@media only screen and (max-width: 600px) {
+	
+}
+
+@media only screen and (min-width: 600px ) {
+	
+}
+
+@media only screen and (min-width: 992px ) {
+
+}
+
+@media only screen and (min-width: 1024px ) {
+  .expand-nav {
+    position: absolute;
+    top: 100%;
+    right: 24%;
+    z-index: 99;
+    background: $darkgrey;
+    color: white;
+    border-top: 4px solid $mainred;
+    box-shadow: $boxShadow;
+    width: 10rem;
+      ul {
+        list-style-type: none;
+        margin-left: -1rem;
+        margin-right: 1rem;
+      }
+      li {
+        cursor: pointer;
+        &:hover, &:active {
+          color: $mainred;
+          transition: all ease-out 200ms;
+          padding-left: 2px;
+        }
+      }
+  }
+}
+@media only screen and (min-width: 1200px ) {
+  .expand-nav {
+    position: absolute;
+    top: 100%;
+    right: 20rem;
+    z-index: 99;
+    background: $darkgrey;
+    color: white;
+    border-top: 4px solid $mainred;
+    box-shadow: $boxShadow;
+    width: 10rem;
+      ul {
+        list-style-type: none;
+        margin-left: -1rem;
+        margin-right: 1rem;
+      }
+      li {
+        cursor: pointer;
+        &:hover, &:active {
+          color: $mainred;
+          transition: all ease-out 200ms;
+          padding-left: 2px;
+        }
+      }
+  }
+  .closing-overlay {
+    position: absolute;
+    top: 106%;
+    right: 0%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.0);
+    width: 100vw;
+    height: calc(100vh - 3rem);
+  }
 }

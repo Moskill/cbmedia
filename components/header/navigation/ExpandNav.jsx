@@ -2,17 +2,28 @@ import React from 'react';
 import classes from './ExpandNav.module.scss';
 
 const ExpandNav = (props) => {
+
+  const changesHandler = (e) => {
+    console.log(e.target.id);
+    props.onChangeService(e.target.id)
+    props.onExpandNav(false);
+  }
+
+
   return (
-        <div className={classes['expand-nav']}>
-          <ul >
-            <li>Webdesign</li>
-            <li>Webentwicklung</li>
-            <li>Logodesign</li>
-            <li>Produktfotos</li>
-            <li>Mediendesign</li>
-            <li>Beratung</li>
-          </ul>
-        </div>
+    <>
+      <div className={classes['expand-nav']}>
+        <ul >
+          <li onClick={changesHandler}><a id='webdesign' href='#service'>Webdesign</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('webentwicklung')}>Webentwicklung</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('logodesign')}>Logodesign</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('produktfotos')}>Produktfotos</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('mediendesign')}>Mediendesign</a></li>
+          <li onClick={() => props.onExpandNav(false)}><a href='#service' onClick={() => props.onChangeService('consulting')}>Beratung</a></li>
+        </ul>
+      </div>
+      <div className={classes['closing-overlay']} onMouseOver={() => props.onExpandNav(false)}></div>
+    </>
   )
 }
 
