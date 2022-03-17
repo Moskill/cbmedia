@@ -49,7 +49,7 @@ const SingleTab = (props) => {
 
   return (
     <>
-      <div className={classes.container} key={props.key}>
+      <div className={classes.container} >
         <div className={classes['tab-body']} >
           {tabIcon}
           <h1>{props.title}</h1>
