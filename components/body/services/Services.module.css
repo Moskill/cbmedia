@@ -11,6 +11,7 @@
 .container img {
   height: 17rem;
   width: auto;
+  max-width: 80%
 }
 
 .img-box {
@@ -111,14 +112,14 @@
   }
 
   .right-arrow {
-    top: 45%;
+    top: 8rem;
     right: 10px;
     font-size: 2rem;
     user-select: none; 
   }
   
   .left-arrow {
-    top: 45%;
+    top: 8rem;
     left: 10px;
     font-size: 2rem;
     user-select: none; 
@@ -168,20 +169,32 @@
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+  .container img {
+    margin-top: 2.5rem;
+    max-height: 10rem;
+    height: auto;
+    width: auto;
+    max-width: 80%;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  
+    .container img {
+    height: auto;
+    width: auto;
+    margin-top: 0.8rem;
+    max-width: 80%;
+}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .container img {
-    height: 20rem;
+    height: auto;
     width: auto;
     margin-top: 0.8rem;
-    max-width: 32rem;
+    max-width: 80%;
 }
 }
 
@@ -192,8 +205,9 @@
 @media only screen and (min-width: 1200px) {
   .container img {
     margin-top: 3rem;
-    height: 32rem;
+    max-height: 32rem;
     width: auto;
-    max-width: inherit;
+    height: auto;
+    max-width: 80%;
 }
 }

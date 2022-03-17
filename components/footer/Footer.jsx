@@ -4,7 +4,7 @@ import { FaFacebookF, FaWhatsapp, FaDiscord, FaLinkedinIn } from 'react-icons/fa
 import FooterNavigation from './FooterNavigation';
 
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div className={classes.container}>
       <div className={classes['footer-wrapper']}>
@@ -52,7 +52,7 @@ const Footer = () => {
           <FaLinkedinIn className={classes['social-icon']} id='linkedin' />
         <span>Tel: 0152 - 22 16 94 70</span>
         </div>
-        <FooterNavigation />
+        <FooterNavigation onChangeService={props.onChangeService} />
       </div>
     </div>
   )
