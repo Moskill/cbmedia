@@ -10,26 +10,14 @@ const Navbar = (props) => {
   return (
     <>
       <ul className={classes.container}>
-        <li className={classes.navElement} onClick={() => props.onChangeService('Tittengucken')}>Home</li>
+        <li className={classes.navElement} onClick={() => props.onChangeService('index')}>Home</li>
         <li className={classes.navElement} onMouseOver={() => setShowExpandNav(true)}>Dienste</li>
         <li className={classes.navElement}>Referenzen</li>
         <li className={classes.navElement}>Kontakt</li>
       </ul>
 
-      {showExpandNav && <ExpandNav onExpandNav={setShowExpandNav} onChangeService={props.onChangeService}  />
-      
-      }
-      {/* {showExpandNav && <div className={classes['expand-nav']} onClick={() => setShowExpandNav(false)}>
-        <ul onClick={() => setShowExpandNav(false)}>
-          <li>Webdesign</li>
-          <li>Webentwicklung</li>
-          <li>Logodesign</li>
-          <li>Produktfotos</li>
-          <li>Mediendesign</li>
-          <li>Beratung</li>
-        </ul>
-      </div>
-      } */}
+      {showExpandNav && <ExpandNav onExpandNav={setShowExpandNav} onChangeService={props.onChangeService}  />}
+
     </>
   )
 }

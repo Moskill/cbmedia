@@ -1,33 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {servicesData} from './servicesData';
 import { TabData } from '../catTabs/TabData';
 import classes from './Services.module.css';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft, FaArrowRight, FaArrowLeft} from 'react-icons/fa';
 import ServiceImages from './ServiceImages';
 
-import design1 from '../../../assets/xs/webdev/bildname1.jpg';
-import design2 from '../../../assets/xs/webdev/bildname2.jpg';
-import design3 from '../../../assets/xs/webdev/bildname3.jpg';
-import design4 from '../../../assets/xs/webdev/bildname4.jpg';
-import design5 from '../../../assets/xs/webdev/bildname5.jpg';
-
-import develop1 from '../../../assets/xs/webdev/develop1.jpg';
-import develop2 from '../../../assets/xs/webdev/develop2.jpg';
-import develop3 from '../../../assets/xs/webdev/develop3.jpg';
-import develop4 from '../../../assets/xs/webdev/develop4.jpg';
-import develop5 from '../../../assets/xs/webdev/develop5.jpg';
 
 const Services = (props) => {
-  let imgArr = [design1, design2, design3, design4, design5];
-  let servArr = ['webdesign', 'logodesign', 'produktfotografie', 'mediendesign']; 
+  let servArr = ['webdesign', 'logodesign', 'produktfotos', 'mediendesign']; 
   
-  const [currentService, setCurrentService] = useState(servArr.indexOf(props.state))
+  const [currentService, setCurrentService] = useState(servArr.indexOf(props.service))
   const [current, setCurrent] = useState(0);
   const length = props.images && props.images[currentService].length;
 
-  // props.images && props.images[currentService].map((item, index) => {
-  //   console.log(index)
-  // })
+  useEffect(() => {
+    setCurrentService(servArr.indexOf(props.service));
+  },[props.service])
+
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
@@ -46,13 +35,12 @@ const Services = (props) => {
     props.onChangeService(servArr[currentService]);
   }
 
-  // console.log(servicesData[currentService].text)
-  // console.log(servicesData[servArr.indexOf(props.state)])
-  //console.log(servicesData[servArr.indexOf(props.state)].exsamples, 'FCIKENCENNCKEN')
   return (
     <>
       <div className={classes['service-pagination']}>
-        <FaArrowLeft onClick={prevService} /><span className={classes['service-display']}> {servArr[currentService]}</span><FaArrowRight onClick={nextService} />
+        <FaArrowLeft onClick={prevService} />
+          <span className={classes['service-display']}> {servArr[currentService]}</span>
+        <FaArrowRight onClick={nextService} />
       </div>
         <p className={classes['service-text']}>{servicesData[currentService].text}</p>
       <div className={classes['container']}>
