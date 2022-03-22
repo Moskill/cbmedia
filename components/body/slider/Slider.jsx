@@ -48,7 +48,7 @@ const Slider = (props) => {
   return (
     <>
       <section className={classes.slider}>
-        <Infobox data={SliderData[current]} />
+        <Infobox data={SliderData[current]} service={props.service} onChangeService={props.onChangeService}/>
         <div className={classes.pagination}>
           {SliderData.map((item, index) => {
             return <SliderDots key={index} index={index} active={current} onClick={selectSlidePerDot} />

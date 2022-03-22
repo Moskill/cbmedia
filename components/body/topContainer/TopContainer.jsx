@@ -5,14 +5,15 @@ import { SliderData } from '../slider/SliderData';
 import CallInfo from './CallInfo';
 
 
-const TopContainer = () => {
+const TopContainer = (props) => {
 
+  console.log(props, 'VERFICKTER TOPCONTAINER')
 
   const [containerContent, setContainerContent] = useState('slider');
   return (
     <>
       <CallInfo />
-      <Slider />
+      <Slider service={props.service} onChangeService={props.onChangeService}/>
     </>
   )
 }

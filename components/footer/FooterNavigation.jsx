@@ -1,13 +1,13 @@
 import React from 'react';
-import classes from './FooterNavigation.module.css';
+import classes from './FooterNavigation.module.scss';
 
 const FooterNavigation = (props) => {
   return (
     <div className={classes['container']}>
     
-        <div onClick={() => props.onChangeService('datenschutz')} >Datenschutzerklärung</div>
-        <div>Link 2</div>
-        <div>Link 3</div>
+        <a href='#' onClick={() => props.onChangeService('datenschutz')} >Datenschutzerklärung</a>
+        <a href='#' onClick={() => props.onChangeService('impressum')}>Impressum</a>
+        <a href='#' onClick={() => props.onChangeService('support')}>Support</a>
       
     </div>
 
