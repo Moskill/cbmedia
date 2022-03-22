@@ -3,7 +3,7 @@ import classes from './TabContainer.module.css';
 import SingleTab from './SingleTab';
 import { TabData } from './TabData';
 
-const TabContainer = () => {
+const TabContainer = (props) => {
   return (
     <>
       <div className={classes.container}>
@@ -14,7 +14,7 @@ const TabContainer = () => {
         <h1>Für Mobile optimiert</h1> */}
         {TabData && TabData.map((item, index) => {
           // {console.log(item.title)}
-          return <SingleTab key={index} image={item.image} title={item.title} subtile={item.subtitle} link={item.link} text={item.shortDesc} imgUrl={`../../../assets/xs/${item.image}.jpg`} />
+          return <SingleTab image={item.image} title={item.title} subtile={item.subtitle} link={item.link} text={item.shortDesc} imgUrl={`../../../assets/xs/${item.image}.jpg`} onChangeService={props.onChangeService} service={props.service}/>
         })}
       </div>
     </>

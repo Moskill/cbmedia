@@ -16,8 +16,8 @@ const Layout = ({children}) => {
   const [service, setService] = useState('webdesign');
   const [page, setPage] = useState('index');
 
-  console.log(service, 'SERVICE');
-  console.log(page, 'PAGE');
+  // console.log(service, 'SERVICE');
+  console.log(data, 'DATA LAYOUT');
 
   useEffect(() => {
     switch(service) {
@@ -52,10 +52,10 @@ const Layout = ({children}) => {
         {page === 'index' && (
           <>
             <section id='top'>
-              <TopContainer />
+              <TopContainer service={service} onChangeService={setService} />
             </section>
             <section id='tabs'>
-              <TabContainer />
+              <TabContainer service={service} onChangeService={setService}/>
             </section>
             <section id='service'>
               <Services id='services' service={service} onChangeService={setService} images={data}/>

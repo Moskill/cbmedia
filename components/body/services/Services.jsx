@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import {servicesData} from './servicesData';
 import { TabData } from '../catTabs/TabData';
-import classes from './Services.module.css';
+import classes from './Services.module.scss';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft, FaArrowRight, FaArrowLeft} from 'react-icons/fa';
 import ServiceImages from './ServiceImages';
 
 
 const Services = (props) => {
   let servArr = ['webdesign', 'logodesign', 'produktfotos', 'mediendesign']; 
+
   
   const [currentService, setCurrentService] = useState(servArr.indexOf(props.service))
   const [current, setCurrent] = useState(0);
   const length = props.images && props.images[currentService].length;
 
-  useEffect(() => {
-    setCurrentService(servArr.indexOf(props.service));
+  useEffect(async () => {
+    await setCurrentService(servArr.indexOf(props.service));
+    console.log(currentService && currentService);
   },[props.service])
 
 
@@ -35,6 +37,9 @@ const Services = (props) => {
     props.onChangeService(servArr[currentService]);
   }
 
+  
+  console.log(currentService && currentService)
+  
   return (
     <>
       <div className={classes['service-pagination']}>
@@ -55,7 +60,6 @@ const Services = (props) => {
                   
                   <div className={classes['img-box']}>
                     <ServiceImages service={currentService} index={index} alt={servArr[currentService]} image={props.images && props.images[currentService][index]}/>
-                    {console.log(item)}
                   </div>
                 )}
               </div>

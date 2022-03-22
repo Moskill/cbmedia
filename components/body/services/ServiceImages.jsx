@@ -3,7 +3,6 @@ import React from 'react';
 const ServiceImages = (props) => {
 
   console.log(props)
-  
 
   return (
     <>

@@ -24,12 +24,12 @@ export const TabData = [
     shortDesc: 'Individuelles Design für Ihr Markenzeichen.'
   },
   {
-    image: 'produktfotografie',
+    image: 'produktfotos',
     title: 'PRODUKTFOTOS',
-    link: 'produktfotografie',
+    link: 'produktfotos',
     subtitle: 'Produktfotos für Ihr Angebot',
     text:'Sie haben einen Online-Shop, aber noch keine professionellen Bilder Ihrer Produkte? Oder Sie sind mit der Qualität Ihrer Fotos unzufrieden? Hochwertige Fotos steigern den Verkaufserfolg nachweislich um bis zu 70%. Wir wissen genau, wie man Produkte für das Web in Szene setzt. Kontaktieren Sie uns jetzt!',
-    shortDesc: 'Professionelle Bilder für Ihr Angebote'
+    shortDesc: 'Professionelle Produkt-Bilder für Ihre Angebote fertigen wir auf Wunsch gerne an'
   },
   {
     image: 'mediendesign',
