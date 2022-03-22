@@ -3,9 +3,7 @@ import classes from './RespNav.module.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import RespNavOverlay from './RespNavOverlay';
 
-
-
-const RespNav = () => {
+const RespNav = (props) => {
 
   const [respOverlayOpen, setRespOverlayOpen] = useState(false);
   const [showBurgerIcon, setShowBurgerIcon] = useState(true);
@@ -18,8 +16,15 @@ const RespNav = () => {
 
   return (
     <>
-      {!showBurgerIcon && <RespNavOverlay onOverlayOpen={openOverlayHandler} />}
-      {showBurgerIcon && <GiHamburgerMenu className={classes['burger-icon']} onClick={() => openOverlayHandler()}/>} 
+      {!showBurgerIcon && <RespNavOverlay 
+        service={props.service}
+        onChangeService={props.onChangeService}
+        onOverlayOpen={openOverlayHandler} />
+      }
+      {showBurgerIcon && <GiHamburgerMenu 
+        className={classes['burger-icon']} 
+        onClick={() => openOverlayHandler()}/>
+      } 
     </>
   )
 }

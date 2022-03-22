@@ -8,6 +8,7 @@
   color: #353535;
   z-index: 30;
   position: fixed;
+  display: block;
 }
 
 
@@ -23,7 +24,9 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  
+  .burger-icon {
+    display: block;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -32,8 +35,15 @@
     display: block;
   }
 }
+@media only screen and (min-width: 992px) {
+  .burger-icon {
+    display: none;
+  }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  
+  .burger-icon {
+    display: none;
+  }
 }
