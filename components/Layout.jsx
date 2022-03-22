@@ -33,8 +33,14 @@ const Layout = ({children}) => {
       case 'datenschutz':
         setPage('datenschutz');
       break;
-      case 'index':
-        setPage('index');
+      case 'about':
+        setPage('about');
+      break;
+      case 'kontakt':
+        setPage('kontakt');
+      break;
+      case 'impressum':
+        setPage('impressum');
       break;
       default: 
         setPage('index');
@@ -47,7 +53,7 @@ const Layout = ({children}) => {
     <div className={classes.container}>
       <HTMLHead />
       <main className={classes.main}>
-          <RespNav onChangeService={setService} />
+          <RespNav onChangeService={setService} service={service}  />
           <Header onChangeService={setService}  />
         {page === 'index' && (
           <>

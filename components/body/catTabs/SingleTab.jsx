@@ -48,7 +48,7 @@ const SingleTab = (props) => {
             {props.link !== 'webentwicklung' && props.link !== 'consulting' && 
               <button className={classes['darkBtn']} onClick={() => props.onChangeService(props.link)}>Beispiele</button>
             }
-            <button className={classes['lightBtn']}>Kontakt</button>
+            <button className={classes['lightBtn']}><a href='#kontakt'>Kontakt</a></button>
           </div>
         </div>
       </div>

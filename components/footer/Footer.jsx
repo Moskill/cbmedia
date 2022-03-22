@@ -6,7 +6,7 @@ import FooterNavigation from './FooterNavigation';
 
 const Footer = (props) => {
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id='kontakt'>
       <div className={classes['footer-wrapper']}>
         <h1>Kontakt</h1>
         <form className={classes['contact-form']} id='msg-form'>

@@ -16,7 +16,12 @@ const Navbar = (props) => {
         <li className={classes.navElement}>Kontakt</li>
       </ul>
 
-      {showExpandNav && <ExpandNav onExpandNav={setShowExpandNav} onChangeService={props.onChangeService}  />}
+      {showExpandNav && 
+        <ExpandNav 
+          onExpandNav={setShowExpandNav} 
+          onChangeService={props.onChangeService}  
+        />
+      }
 
     </>
   )
