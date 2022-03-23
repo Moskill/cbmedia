@@ -7,7 +7,6 @@ import {VscFileMedia} from 'react-icons/vsc';
 
 const SingleTab = (props) => {
 
-  console.log(props.link)
 
   // console.log(props)
   let tabIcon = '';

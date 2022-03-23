@@ -7,7 +7,7 @@ import CallInfo from './CallInfo';
 
 const TopContainer = (props) => {
 
-  console.log(props, 'VERFICKTER TOPCONTAINER')
+  // console.log(props, 'VERFICKTER TOPCONTAINER')
 
   const [containerContent, setContainerContent] = useState('slider');
   return (

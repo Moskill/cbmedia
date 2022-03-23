@@ -16,10 +16,9 @@ const Layout = ({children}) => {
   const [service, setService] = useState('webdesign');
   const [page, setPage] = useState('index');
 
-  // console.log(service, 'SERVICE');
-  console.log(data, 'DATA LAYOUT');
 
-  useEffect(() => {
+
+  useEffect(async () => {
     switch(service) {
       case 'webentwicklung':
         setPage('webentwicklung');
@@ -48,7 +47,9 @@ const Layout = ({children}) => {
     }
   }, [service])
 
-
+  // console.log(service, 'SERVICE');
+  console.log(page, 'Page');
+  console.log(service, 'Service');
   return (
     <div className={classes.container}>
       <HTMLHead />

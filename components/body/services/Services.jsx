@@ -14,9 +14,9 @@ const Services = (props) => {
   const [current, setCurrent] = useState(0);
   const length = props.images && props.images[currentService].length;
 
-  useEffect(async () => {
-    await setCurrentService(servArr.indexOf(props.service));
-    console.log(currentService && currentService);
+  useEffect(() => {
+    setCurrentService(servArr.indexOf(props.service));
+    // console.log(currentService && currentService);
   },[props.service])
 
 
@@ -38,7 +38,7 @@ const Services = (props) => {
   }
 
   
-  console.log(currentService && currentService)
+  // console.log(currentService && currentService)
   
   return (
     <>
