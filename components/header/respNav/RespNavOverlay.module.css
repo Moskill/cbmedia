@@ -1,7 +1,7 @@
 .container {
   margin-top: -2.5rem;
   padding: 0;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0, 0.9);
@@ -16,7 +16,7 @@
 }
 
 .icon-container {
-  position: absolute;
+  position: fixed;
   transform: translate(-100%, 75%);
   cursor: pointer;
   top: -1.5%;
