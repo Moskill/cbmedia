@@ -6,13 +6,13 @@ import ExpandNav from './ExpandNav';
 const Navbar = (props) => {
 
   const [showExpandNav, setShowExpandNav] = useState(false);
-  //  console.log(showExpandNav)
+  console.log(props)
   return (
     <>
       <ul className={classes.container}>
         <li className={classes.navElement} onClick={() => props.onChangePage('index')}>Home</li>
         <li className={classes.navElement} onMouseOver={() => setShowExpandNav(true)}>Dienste</li>
-        <li className={classes.navElement}>Referenzen</li>
+        <li className={classes.navElement} onClick={() => props.onScrollDown()} >Referenzen</li>
         <li className={classes.navElement}>Kontakt</li>
       </ul>
 

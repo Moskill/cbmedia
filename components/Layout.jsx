@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classes from '../styles/Home.module.scss';
 import Header from '../components/header/Header';
 import TopContainer from '../components/body/topContainer/TopContainer';
@@ -17,7 +17,13 @@ const Layout = ({children}) => {
   const [service, setService] = useState('webdesign');
   const [page, setPage] = useState('index');
 
+  const [serviceRef, footRef] = useRef(null);
 
+  const scrollDownFunc = () => {
+    serviceRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
+console.log(service)
 
   useEffect(async () => {
     try{ 
@@ -52,28 +58,45 @@ const Layout = ({children}) => {
     }
   }, [service])
 
-  // console.log(service, 'SERVICE');
-  console.log(page, 'Page');
-  console.log(service, 'Service');
   return (
     <div className={classes.container} name='layout'>
       <HTMLHead />
       <main className={classes.main}>
           <RespNav onChangeService={setService} service={service}  />
-          <Header onChangeService={setService} onChangePage={setPage} />
+          <Header 
+            onChangeService={setService} 
+            onChangePage={setPage} 
+            onScrollFunc={scrollDownFunc}
+          />
         {page === 'index' && (
           <>
             <section id='top'>
-              <TopContainer service={service} onChangeService={setService} />
+              <TopContainer
+                service={service} 
+                onChangeService={setService} 
+              />
             </section>
             <section id='tabs'>
-              <TabContainer service={service} onChangeService={setService}/>
+              <TabContainer 
+                service={service} 
+                onChangeService={setService}
+              />
             </section>
-            <section id='service'>
-              <Services id='services' service={service} onChangeService={setService} images={data} page={page}/>
+            <section id='service' ref={serviceRef}>
+              <Services 
+                id='services' 
+                service={service} 
+                onChangeService={setService} 
+                images={data} 
+                page={page}
+              />
             </section>
-            <section id="footer">
-              <Footer  state={service} onChangeService={setService} images={data}/>
+            <section id="footer" ref={footRef}>
+              <Footer  
+                state={service} 
+                onChangeService={setService} 
+                images={data}
+              />
             </section>
           </>
         )}
