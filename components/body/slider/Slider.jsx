@@ -3,6 +3,8 @@ import classes from './Slider.module.scss';
 import design from '../../../assets/design.jpg';
 import development from '../../../assets/development.jpg';
 import photographic from '../../../assets/photographic.jpg';
+import webdesign from '../../../assets/webdesign.jpg';
+import consulting from '../../../assets/consulting.jpg';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa';
 import { SliderData } from '../slider/SliderData';
 import SliderDots from './SliderDots';
@@ -21,6 +23,11 @@ const Slider = (props) => {
         return development.src;  
       case 'photographic':
         return photographic.src;  
+      case 'webdesign':
+        return webdesign.src;  
+      case 'consulting':
+        return consulting.src;  
+
     }
   }
 

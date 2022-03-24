@@ -4,7 +4,7 @@ import classes from '../styles/Home.module.scss';
 const Impressum = () => {
   return (
     <>
-    <div className={classes['impressum-container']}>
+    <div className={classes['subpage-container']}>
       <div className={classes['text-block']}>
         <h1>Impressum </h1>
         <h2>Angaben gemäß §5 TMG </h2>
@@ -27,7 +27,7 @@ DE96150484238</p>
 
         <h2>EU-Streitschlichtung</h2>
         <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-<a href='https://ec.europa.eu/consumers/odr/'> https://ec.europa.eu/consumers/odr/.</a>
+<a href='https://ec.europa.eu/consumers/odr/'> https://ec.europa.eu/consumers/odr/. </a>
 Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
 
         <h2>Verbraucherbeilegung/Universalschlichtstelle</h2>
