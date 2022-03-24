@@ -72,7 +72,6 @@ const Services = (props) => {
           <p className={classes['service-text']}>{servicesData[currentService].text}</p>
           <div className={classes['btn-container']}>
             {servArr.map(item => {
-              console.log(item)
               return <button className={classes['darkBtn']} onClick={() => props.onChangeService(item)}>{item}</button>
             })}
             

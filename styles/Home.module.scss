@@ -140,7 +140,7 @@
   // }
 // }
 
-.impressum-container {
+.subpage-container {
   position: absolute;
   font-family: 'Roboto';
   .text-block {
@@ -190,6 +190,28 @@
       section[id=footer] {
         margin-top: 1;
         height: 60vh;
+      }
+    }
+  }
+
+  .subpage-container {
+    position: absolute;
+    font-family: 'Roboto';
+    .text-block {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-top: 5rem;
+      a {
+        text-decoration: underline;
+        color: black;
+        &:hover {
+          text-decoration: none;
+          color: #b30303;
+        }
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 36px;
       }
     }
   }

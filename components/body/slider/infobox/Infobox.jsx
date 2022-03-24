@@ -3,8 +3,6 @@ import classes from './Infobox.module.scss';
 
 const Infobox = (props) => {
 
-  console.log(props)
-
   return (
   <>
     <div className={classes['slider-infobox']}>
@@ -13,7 +11,7 @@ const Infobox = (props) => {
       <p>{props.data.text}</p>
       <div className={classes['slider-btn-box']}>
         <button className={classes['darkBtn']}>Kontakt</button>
-        <button className={classes['lightBtn']} onClick={() => props.onChangeService(props.data.link)}>Beispiele</button>
+        {/* <button className={classes['lightBtn']} onClick={() => props.onChangeService(props.data.link)}>Beispiele</button> */}
       </div>
     </div>
   </>
