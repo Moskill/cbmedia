@@ -8,6 +8,7 @@ import TabContainer from './body/catTabs/TabContainer';
 import Services from './body/services/Services';
 import Footer from './footer/Footer';
 import useSWR from 'swr';
+import Impressum from './Impressum';
 
 const Layout = ({children}) => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -19,31 +20,35 @@ const Layout = ({children}) => {
 
 
   useEffect(async () => {
-    switch(service) {
-      case 'webentwicklung':
-        setPage('webentwicklung');
-      break;
-      case 'consulting':
-        setPage('consulting');
-      break;
-      case 'widerruf':
-        setPage('widerruf')
-      break;
-      case 'datenschutz':
-        setPage('datenschutz');
-      break;
-      case 'about':
-        setPage('about');
-      break;
-      case 'kontakt':
-        setPage('kontakt');
-      break;
-      case 'impressum':
-        setPage('impressum');
-      break;
-      default: 
-        setPage('index');
-      break;
+    try{ 
+        switch(service) {
+        case 'webentwicklung':
+          setPage('webentwicklung');
+        break;
+        case 'consulting':
+          setPage('consulting');
+        break;
+        case 'widerruf':
+          setPage('widerruf')
+        break;
+        case 'datenschutz':
+          setPage('datenschutz');
+        break;
+        case 'about':
+          setPage('about');
+        break;
+        case 'kontakt':
+          setPage('kontakt');
+        break;
+        case 'impressum':
+          setPage('impressum');
+        break;
+        default: 
+          setPage('index');
+        break;
+      }
+    } catch(e) {
+      console.log(e);
     }
   }, [service])
 
@@ -51,11 +56,11 @@ const Layout = ({children}) => {
   console.log(page, 'Page');
   console.log(service, 'Service');
   return (
-    <div className={classes.container}>
+    <div className={classes.container} name='layout'>
       <HTMLHead />
       <main className={classes.main}>
           <RespNav onChangeService={setService} service={service}  />
-          <Header onChangeService={setService}  />
+          <Header onChangeService={setService} onChangePage={setPage} />
         {page === 'index' && (
           <>
             <section id='top'>
@@ -65,7 +70,7 @@ const Layout = ({children}) => {
               <TabContainer service={service} onChangeService={setService}/>
             </section>
             <section id='service'>
-              <Services id='services' service={service} onChangeService={setService} images={data}/>
+              <Services id='services' service={service} onChangeService={setService} images={data} page={page}/>
             </section>
             <section id="footer">
               <Footer  state={service} onChangeService={setService} images={data}/>
@@ -93,18 +98,7 @@ const Layout = ({children}) => {
           </>
         )}
         {page === 'impressum' && (
-          <>
-            <div className={classes.container}>
-              <h1>Impressum </h1>
-              <p>
-                CB Media, Christian Borek<br/>
-                Grünstr. 34<br/>
-                21481 Lauenburg<br/><br/>
-
-                <strong>vertreten durch </strong>
-              </p>
-            </div>
-          </>
+          <Impressum />
         )}
         {page === 'datenschutz' && (
           <>

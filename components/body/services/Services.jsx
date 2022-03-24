@@ -8,15 +8,20 @@ import ServiceImages from './ServiceImages';
 
 const Services = (props) => {
   let servArr = ['webdesign', 'logodesign', 'produktfotos', 'mediendesign']; 
-
   
   const [currentService, setCurrentService] = useState(servArr.indexOf(props.service))
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(servArr.indexOf(props.service));
   const length = props.images && props.images[currentService].length;
-
+  console.log(servArr[currentService])
+  
+  if(current === -1) setCurrent(0);
+ console.log(current)
   useEffect(() => {
     setCurrentService(servArr.indexOf(props.service));
-    // console.log(currentService && currentService);
+  },[props.page])
+
+  useEffect(() => {
+    setCurrent(0);
   },[props.service])
 
 

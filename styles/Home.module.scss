@@ -140,6 +140,27 @@
   // }
 // }
 
+.impressum-container {
+  position: absolute;
+  font-family: 'Roboto';
+  .text-block {
+    margin-left: 5rem;
+    margin-top: 5rem;
+    a {
+      text-decoration: underline;
+      color: black;
+      &:hover {
+        text-decoration: none;
+        color: #b30303;
+      }
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 36px;
+    }
+  }
+}
+
 
 @media (max-width: 600px) {
   .grid {
