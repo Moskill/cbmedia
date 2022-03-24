@@ -12,17 +12,17 @@ const Services = (props) => {
   const [currentService, setCurrentService] = useState(servArr.indexOf(props.service))
   const [current, setCurrent] = useState(servArr.indexOf(props.service));
   const length = props.images && props.images[currentService].length;
-  console.log(servArr[currentService])
+  console.log(servArr.indexOf(props.service))
   
   if(current === -1) setCurrent(0);
- console.log(current)
+//  console.log(current)
   useEffect(() => {
     setCurrentService(servArr.indexOf(props.service));
-  },[props.page])
+  },[props.page, props.service])
 
-  useEffect(() => {
-    setCurrent(0);
-  },[props.service])
+  // useEffect(() => {
+  //   setCurrent(0);
+  // },[props.service])
 
 
   const nextSlide = () => {
@@ -34,12 +34,12 @@ const Services = (props) => {
   }
 
   const nextService = () => {
-    setCurrentService(currentService === servArr.length - 1 ? 0 : currentService + 1);
     props.onChangeService(servArr[currentService]);
+    setCurrentService(currentService === servArr.length - 1 ? 0 : currentService + 1);
   }
   const prevService = () => {
-    setCurrentService(currentService === 0 ? servArr.length - 1 : currentService - 1)
     props.onChangeService(servArr[currentService]);
+    setCurrentService(currentService === 0 ? servArr.length - 1 : currentService - 1)
   }
 
   
@@ -47,14 +47,13 @@ const Services = (props) => {
   
   return (
     <>
-      <div className={classes['service-pagination']}>
+      {/* <div className={classes['service-pagination']}>
         <FaArrowLeft onClick={prevService} />
           <span className={classes['service-display']}> {servArr[currentService]}</span>
         <FaArrowRight onClick={nextService} />
-      </div>
-        <p className={classes['service-text']}>{servicesData[currentService].text}</p>
-      <div className={classes['container']}>
+      </div> */}
 
+        <div className={classes['container']}>
           <FaArrowAltCircleLeft className={classes['left-arrow']} onClick={prevSlide}/>
           <FaArrowAltCircleRight className={classes['right-arrow']} onClick={nextSlide}/>
           
@@ -70,6 +69,14 @@ const Services = (props) => {
               </div>
             )
           })}
+          <p className={classes['service-text']}>{servicesData[currentService].text}</p>
+          <div className={classes['btn-container']}>
+            {servArr.map(item => {
+              console.log(item)
+              return <button className={classes['darkBtn']} onClick={() => props.onChangeService(item)}>{item}</button>
+            })}
+            
+          </div>
       </div>
     </>
   );
