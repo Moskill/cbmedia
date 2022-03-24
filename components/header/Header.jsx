@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <div className={classes.wrapper}>
       <Logo />
-      <Navbar onChangeService={props.onChangeService} />
+      <Navbar onChangeService={props.onChangeService} onChangePage={props.onChangePage} />
     </div>
   )
 }
