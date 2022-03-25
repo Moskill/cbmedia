@@ -22,7 +22,7 @@ export const SliderData = [
   },
   {
     image: 'design',
-    title: 'DESIGN',
+    title: 'PRINTDESIGN',
     link: 'design',
     subtitle: 'Logo-Design und Mediengestaltung',
     text: 'Sie benötigen ein Logo oder einen Flyer für ein neues Projekt? Oder brauchen Sie vielleicht ein Prospekt für ein neues Produkt? Wir fertigen auf Wunsch auch Webgrafiken, Banner, Galeriebilder, Visitenkarten, Plakate uvm. für Sie an. Kontaktieren Sie uns jetzt!'
