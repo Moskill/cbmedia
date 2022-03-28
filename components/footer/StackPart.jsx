@@ -1,11 +1,17 @@
 import React from 'react';
 import classes from './StackPart.module.scss';
+import {FaReact, FaWordpress, FaNodeJs} from 'react-icons/fa';
+import {SiMongodb, SiMysql} from 'react-icons/si';
 
 const StackPart = () => {
   return (
     <>
     <div className={classes['container']}>
-      <h1 name='stackpart' >This is Our Stack</h1>
+      <FaReact />
+      <SiMongodb />
+      <FaWordpress />
+      <SiMysql />
+      <FaNodeJs />
       </div>
     </>
   )

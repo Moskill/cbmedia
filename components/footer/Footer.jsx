@@ -3,8 +3,7 @@ import classes from './Footer.module.css';
 import { FaFacebookF, FaWhatsapp, FaDiscord, FaLinkedinIn } from 'react-icons/fa';
 import FooterNavigation from './FooterNavigation';
 import StackPart from './StackPart';
-import {FaReact} from 'react-icons/fa';
-import {SiMongodb} from 'react-icons/si';
+
 
 
 const Footer = (props) => {
@@ -47,6 +46,7 @@ const Footer = (props) => {
               <textarea  />
             </div>
           </form>
+            <StackPart />
               <button className={classes['form-submit-btn']} type='submit' form='msg-form'>Absenden</button>
           
           <div className={classes['social-bar']}>
@@ -59,7 +59,6 @@ const Footer = (props) => {
       <hr/>
           <FooterNavigation onChangeService={props.onChangeService} />
         </div>
-            <StackPart />
       </div>
     </>
   )
