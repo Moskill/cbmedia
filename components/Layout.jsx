@@ -10,13 +10,14 @@ import Footer from './footer/Footer';
 import useSWR from 'swr';
 import Impressum from './Impressum';
 import Datenschutz from './Datenschutz';
+import SiteSitting from './SiteSitting';
 
 const Layout = ({children}) => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data } = useSWR('/api/readfiles', fetcher);
 
   const [service, setService] = useState('webdesign');
-  const [page, setPage] = useState('index');
+  const [page, setPage] = useState('siteSitting');
 
   const [serviceRef, footRef] = useRef(null);
 
@@ -24,7 +25,7 @@ const Layout = ({children}) => {
     serviceRef.current.scrollIntoView({ behavior: 'smooth' })
   }
 
-// console.log(service)
+console.log(page)
 
   useEffect(async () => {
     try{ 
@@ -126,6 +127,9 @@ const Layout = ({children}) => {
         )}
         {page === 'datenschutz' && (
           <Datenschutz />
+        )}
+        {page === 'siteSitting' && (
+          <SiteSitting />
         )}
 
 

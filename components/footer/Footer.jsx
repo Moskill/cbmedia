@@ -46,7 +46,7 @@ const Footer = (props) => {
               <textarea  />
             </div>
           </form>
-            <StackPart />
+            {/* <StackPart /> */}
               <button className={classes['form-submit-btn']} type='submit' form='msg-form'>Absenden</button>
           
           <div className={classes['social-bar']}>
