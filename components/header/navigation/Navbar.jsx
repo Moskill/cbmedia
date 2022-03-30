@@ -10,7 +10,7 @@ const Navbar = (props) => {
   return (
     <>
       <ul className={classes.container}>
-        <li className={classes.navElement} onClick={() => props.onChangePage('index')}>Home</li>
+        <li className={classes.navElement} onClick={() => props.onChangePage('siteSitting')}>Home</li>
         <li className={classes.navElement} onMouseOver={() => setShowExpandNav(true)}>Dienste</li>
         <li className={classes.navElement} onClick={() => props.onScrollDown()} >Referenzen</li>
         <li className={classes.navElement}>Kontakt</li>
